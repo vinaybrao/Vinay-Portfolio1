@@ -359,6 +359,33 @@ footer{border-top:1px solid var(--border);padding:28px 0;display:flex;justify-co
 /* ── PAYMENT JOURNEY OVERLAY ── */
 .pj-overlay{display:none;position:fixed;inset:0;z-index:500;background:#0a0a14;overflow:hidden}
 .pj-overlay.open{display:flex;flex-direction:column;overflow:hidden}
+
+/* Intro screen (Screen 0) */
+.pj-intro-wrap{width:100%;max-width:860px;margin:0 auto}
+.pj-intro-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.3);border-radius:99px;padding:7px 18px;font-size:12px;font-weight:700;color:#a5b4fc;letter-spacing:.5px;margin-bottom:28px}
+.pj-intro-badge::before{content:'';width:8px;height:8px;border-radius:50%;background:#6366f1;box-shadow:0 0 0 3px rgba(99,102,241,.25)}
+.pj-intro-h1{font-family:var(--font-head);font-size:clamp(28px,4vw,52px);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-2px;margin-bottom:20px}
+.pj-intro-h1 span{background:linear-gradient(135deg,#6366f1,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.pj-intro-desc{font-size:16px;color:rgba(255,255,255,.6);line-height:1.85;max-width:680px;margin-bottom:36px}
+.pj-intro-desc strong{color:rgba(255,255,255,.9);font-weight:600}
+.pj-intro-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px}
+.pj-intro-metric{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:24px 20px;position:relative;overflow:hidden;transition:.2s}
+.pj-intro-metric::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#6366f1,#8b5cf6)}
+.pj-intro-metric:hover{border-color:rgba(99,102,241,.3);transform:translateY(-2px)}
+.pj-intro-metric-num{font-family:var(--font-head);font-size:36px;font-weight:900;color:#fff;letter-spacing:-1.5px;line-height:1;margin-bottom:8px}
+.pj-intro-metric-num span{color:#a78bfa}
+.pj-intro-metric-label{font-size:12px;color:rgba(255,255,255,.45);font-weight:500;line-height:1.5}
+.pj-intro-divider{border:none;border-top:1px solid rgba(255,255,255,.07);margin:36px 0}
+.pj-intro-journey-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:16px}
+.pj-intro-steps{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:36px}
+.pj-intro-step{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:rgba(255,255,255,.5);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:99px;padding:6px 14px}
+.pj-intro-step-num{width:20px;height:20px;border-radius:50%;background:rgba(99,102,241,.2);color:#a5b4fc;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pj-intro-arrow{color:rgba(255,255,255,.2);font-size:16px}
+.pj-intro-cta{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border:none;border-radius:14px;font-size:15px;font-weight:700;cursor:pointer;font-family:var(--font);transition:.2s;box-shadow:0 8px 32px rgba(99,102,241,.4)}
+.pj-intro-cta:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 12px 40px rgba(99,102,241,.5)}
+.pj-intro-cta svg{transition:.3s}
+.pj-intro-cta:hover svg{transform:translateX(4px)}
+
 .pj-back{position:fixed;top:18px;left:24px;z-index:600;display:flex;align-items:center;gap:8px;font-family:var(--font);font-size:13px;font-weight:700;color:rgba(255,255,255,.6);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(12px);padding:8px 16px;border-radius:99px;cursor:pointer;transition:.2s}
 .pj-back:hover{color:#fff;background:rgba(255,255,255,.12)}
 .pj-progress{position:fixed;top:0;left:0;right:0;height:3px;background:rgba(255,255,255,.06);z-index:700}
@@ -686,22 +713,22 @@ footer{border-top:1px solid var(--border);padding:28px 0;display:flex;justify-co
         <div class="exp-thumb-icon">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/><path d="M6 15h4"/><path d="M14 15h4"/></svg>
         </div>
-        <div class="exp-thumb-label">Payment Journey</div>
-        <div class="exp-thumb-sub">End-to-End Flow</div>
+        <div class="exp-thumb-label">Stamp Duty</div>
+        <div class="exp-thumb-sub">Payment Microservice</div>
       </div>
       <div class="exp-body">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
-          <span class="exp-category">Payments · UX</span>
+          <span class="exp-category">Payments · B2B2C</span>
           <span style="font-size:11px;font-weight:600;color:var(--ink3)">5 screens</span>
         </div>
-        <div class="exp-title">Payment Journey</div>
-        <div class="exp-desc">Experience a complete B2B payment flow — from email invoice to payment gateway to receipt download. Choose from Net Banking, Cards, or UPI.</div>
+        <div class="exp-title">Stamp Duty Payment Collection</div>
+        <div class="exp-desc">End-to-end payment microservice enabling enterprise clients to collect stamp duty from their customers via PhonePe &amp; Razorpay — 100K txns/month, $3M collected monthly.</div>
         <div class="exp-tags">
-          <span class="exp-pill">Email Invite</span>
-          <span class="exp-pill">Net Banking</span>
-          <span class="exp-pill">Cards</span>
-          <span class="exp-pill">UPI</span>
-          <span class="exp-pill">Receipt</span>
+          <span class="exp-pill">PhonePe</span>
+          <span class="exp-pill">Razorpay</span>
+          <span class="exp-pill">B2B2C</span>
+          <span class="exp-pill">Microservice</span>
+          <span class="exp-pill">Net Banking · UPI · Cards</span>
         </div>
         <div class="exp-footer">
           <div class="exp-read">Experience demo <span class="exp-arrow">→</span></div>
@@ -1900,11 +1927,55 @@ footer{border-top:1px solid var(--border);padding:28px 0;display:flex;justify-co
   <!-- SVG gradient for timer -->
   <svg width="0" height="0" style="position:absolute"><defs><linearGradient id="timerGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#8b5cf6"/></linearGradient></defs></svg>
 
+  <!-- ── SCREEN 0: INTRO / OVERVIEW ── -->
+  <div class="pj-screen active" id="pj-s0">
+    <div class="pj-intro-wrap">
+      <div class="pj-intro-badge">Payments · B2B2C · Microservice</div>
+      <h1 class="pj-intro-h1">Stamp Duty Payment<br><span>Collection Microservice</span></h1>
+      <p class="pj-intro-desc">
+        Enabling stamp duty payment collection from end customers of enterprise clients <strong>(B2B2C)</strong> via multiple payment gateway integrations — <strong>PhonePe</strong> and <strong>Razorpay</strong> — built for business continuity and scale.
+        The microservice handles the full payment lifecycle from invoice generation to receipt, with fallback across gateways ensuring <strong>zero downtime</strong> for enterprise SLAs.
+        This drove <strong>100K transactions per month</strong>, collecting <strong>$3M in stamp duty monthly</strong>, and <strong>reduced payment-related support tickets by 100%</strong> through automated reconciliation and status tracking.
+      </p>
+      <div class="pj-intro-metrics">
+        <div class="pj-intro-metric">
+          <div class="pj-intro-metric-num"><span>100K</span></div>
+          <div class="pj-intro-metric-label">Transactions processed<br>per month</div>
+        </div>
+        <div class="pj-intro-metric">
+          <div class="pj-intro-metric-num"><span>$3M</span></div>
+          <div class="pj-intro-metric-label">Stamp duty collected<br>monthly</div>
+        </div>
+        <div class="pj-intro-metric">
+          <div class="pj-intro-metric-num"><span>100%</span></div>
+          <div class="pj-intro-metric-label">Reduction in payment<br>support tickets</div>
+        </div>
+      </div>
+      <hr class="pj-intro-divider"/>
+      <div class="pj-intro-journey-label">Interactive demo — 5 steps</div>
+      <div class="pj-intro-steps">
+        <div class="pj-intro-step"><div class="pj-intro-step-num">1</div>Email Invoice</div>
+        <div class="pj-intro-arrow">›</div>
+        <div class="pj-intro-step"><div class="pj-intro-step-num">2</div>Payment Details</div>
+        <div class="pj-intro-arrow">›</div>
+        <div class="pj-intro-step"><div class="pj-intro-step-num">3</div>Payment Gateway</div>
+        <div class="pj-intro-arrow">›</div>
+        <div class="pj-intro-step"><div class="pj-intro-step-num">4</div>Processing</div>
+        <div class="pj-intro-arrow">›</div>
+        <div class="pj-intro-step"><div class="pj-intro-step-num">5</div>Receipt &amp; Download</div>
+      </div>
+      <button class="pj-intro-cta" onclick="pjGoTo(1)">
+        Start Experience
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
   <!-- ── SCREEN 1: EMAIL INVITE ── -->
-  <div class="pj-screen active" id="pj-s1">
+  <div class="pj-screen" id="pj-s1">
     <div class="pj-email-wrap">
       <div style="text-align:center;margin-bottom:20px">
-        <div class="pj-screen-title">You have a new invoice</div>
+        <div class="pj-screen-title">You have a new payment request</div>
         <div class="pj-screen-sub">Open the email below and click Pay Now to begin</div>
       </div>
       <!-- Browser chrome -->
@@ -1929,11 +2000,11 @@ footer{border-top:1px solid var(--border);padding:28px 0;display:flex;justify-co
           <div class="pj-email-header">Inbox</div>
           <div class="pj-email-item unread">
             <div class="pj-email-sender">SecurePay Merchant</div>
-            <div class="pj-email-subj">Invoice #INV-2024-0892 Due</div>
+            <div class="pj-email-subj">Order ID #INV-2024-0892 Due</div>
             <div class="pj-email-prev">Please complete your payment...</div>
           </div>
           <div class="pj-email-item">
-            <div class="pj-email-sender" style="color:rgba(255,255,255,.5)">Melento Platform</div>
+            <div class="pj-email-sender" style="color:rgba(255,255,255,.5)">Payment Platform</div>
             <div class="pj-email-subj" style="color:rgba(255,255,255,.35)">Monthly report ready</div>
           </div>
           <div class="pj-email-item">
@@ -2195,7 +2266,7 @@ function closeCaseStudy(){
 }
 
 // ── PAYMENT JOURNEY ────────────────────────────────────────────
-let pjCurrentScreen=1,pjTimerInterval=null,pjSelectedMethod='Net Banking',pjSelectedMethodIcon='🏦';
+let pjCurrentScreen=0,pjTimerInterval=null,pjSelectedMethod='Net Banking',pjSelectedMethodIcon='🏦';
 
 function openPaymentJourney(){
   pjReset();
@@ -2208,12 +2279,15 @@ function closePaymentJourney(){
   pjStopTimer();
 }
 function pjReset(){
-  pjCurrentScreen=1;
+  pjCurrentScreen=0;
   pjSelectedMethod='Net Banking';
   pjSelectedMethodIcon='🏦';
-  for(let i=1;i<=5;i++){const s=document.getElementById('pj-s'+i);if(s){s.classList.remove('active');}}
-  document.getElementById('pj-s1').classList.add('active');
-  pjUpdateProgress(1);
+  // Hide all screens including intro
+  for(let i=0;i<=5;i++){const s=document.getElementById('pj-s'+i);if(s)s.classList.remove('active');}
+  document.getElementById('pj-s0').classList.add('active');
+  // Hide step dots and progress on intro screen
+  document.getElementById('pj-step-dots').style.opacity='0';
+  document.getElementById('pj-prog-bar').style.width='0%';
   pjStopTimer();
   // Reset method tabs
   ['nb','card','upi'].forEach(m=>{
@@ -2223,7 +2297,7 @@ function pjReset(){
   });
   document.getElementById('pj-tab-nb').classList.add('active');
   document.getElementById('pj-panel-nb').classList.add('active');
-  // Reset bank selections
+  // Reset bank/upi selections
   document.querySelectorAll('.pj-bank-item').forEach(b=>b.classList.remove('selected'));
   document.querySelectorAll('.pj-upi-app').forEach(a=>a.classList.remove('selected'));
 }
@@ -2231,6 +2305,8 @@ function pjGoTo(n){
   document.getElementById('pj-s'+pjCurrentScreen).classList.remove('active');
   pjCurrentScreen=n;
   document.getElementById('pj-s'+n).classList.add('active');
+  // Show step dots once journey starts
+  document.getElementById('pj-step-dots').style.opacity= n>0 ? '1':'0';
   pjUpdateProgress(n);
   if(n===3){pjStartTimer();pjSetGatewayMethod();}
   if(n===4){pjStopTimer();setTimeout(()=>pjGoTo(5),2600);}
