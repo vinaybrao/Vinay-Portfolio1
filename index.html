@@ -157,8 +157,8 @@ nav{position:sticky;top:0;z-index:200;background:rgba(247,246,243,.92);backdrop-
 .cs-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
 .cs-pill{font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--bg2);color:var(--ink2);border:1px solid var(--border)}
 .cs-footer{display:flex;align-items:center;justify-content:space-between}
-.cs-read{font-size:13px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:6px}
-.cs-arrow{font-size:16px;transition:.2s}
+.cs-read{font-size:13px;font-weight:700;color:var(--ink);display:inline-flex;align-items:center;gap:4px;line-height:1}
+.cs-arrow{display:inline-block;font-size:16px;transition:transform .2s ease}
 .cs-card:hover .cs-arrow{transform:translateX(4px)}
 
 /* ── CASE STUDY DETAIL PAGE ── */
@@ -352,8 +352,8 @@ footer{border-top:1px solid var(--border);padding:28px 0;display:flex;justify-co
 .exp-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
 .exp-pill{font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--bg2);color:var(--ink2);border:1px solid var(--border)}
 .exp-footer{display:flex;align-items:center;justify-content:space-between}
-.exp-read{font-size:13px;font-weight:700;color:#6366f1;display:flex;align-items:center;gap:6px}
-.exp-arrow{font-size:16px;transition:.2s}
+.exp-read{font-size:13px;font-weight:700;color:#6366f1;display:inline-flex;align-items:center;gap:4px;line-height:1}
+.exp-arrow{display:inline-block;font-size:16px;transition:transform .2s ease}
 .exp-proj-card:hover .exp-arrow{transform:translateX(4px)}
 
 /* ── PAYMENT JOURNEY OVERLAY ── */
@@ -386,17 +386,26 @@ footer{border-top:1px solid var(--border);padding:28px 0;display:flex;justify-co
 .pj-intro-cta svg{transition:.3s}
 .pj-intro-cta:hover svg{transform:translateX(4px)}
 
-.pj-back{position:fixed;top:18px;left:24px;z-index:600;display:flex;align-items:center;gap:8px;font-family:var(--font);font-size:13px;font-weight:700;color:rgba(255,255,255,.6);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(12px);padding:8px 16px;border-radius:99px;cursor:pointer;transition:.2s}
-.pj-back:hover{color:#fff;background:rgba(255,255,255,.12)}
-.pj-progress{position:fixed;top:0;left:0;right:0;height:3px;background:rgba(255,255,255,.06);z-index:700}
+/* Payment Journey Topbar */
+.pj-topbar{position:fixed;top:0;left:0;right:0;height:70px;background:rgba(10,10,20,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08);z-index:700;display:flex;align-items:center;justify-content:space-between;padding:0 24px}
+.pj-progress{position:absolute;top:0;left:0;right:0;height:3px;background:rgba(255,255,255,.06);z-index:701}
 .pj-progress-bar{height:100%;background:linear-gradient(90deg,#6366f1,#8b5cf6);transition:width .5s ease}
-.pj-step-indicators{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:600;display:flex;align-items:center;gap:8px}
+.pj-back{display:flex;align-items:center;gap:8px;font-family:var(--font);font-size:13px;font-weight:700;color:rgba(255,255,255,.6);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:8px 16px;border-radius:99px;cursor:pointer;transition:.2s;z-index:702}
+.pj-back:hover{color:#fff;background:rgba(255,255,255,.12)}
+.pj-step-indicators{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:8px;z-index:702}
 .pj-step-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2);transition:.3s}
 .pj-step-dot.done{background:#6366f1}
 .pj-step-dot.active{background:#8b5cf6;width:24px;border-radius:4px}
+.pj-topbar-right{width:120px;display:none}
+@media(min-width:768px){.pj-topbar-right{display:block}}
+@media(max-width:768px){
+  .pj-topbar{padding:0 16px}
+  .pj-back .pj-back-text{display:none}
+  .pj-back{padding:8px 12px}
+}
 
 /* screens */
-.pj-screen{display:none;width:100%;height:100%;overflow-y:auto;align-items:flex-start;justify-content:center;padding:80px 32px 48px}
+.pj-screen{display:none;width:100%;height:100%;overflow-y:auto;align-items:flex-start;justify-content:center;padding:100px 32px 48px}
 .pj-screen.active{display:flex}
 
 /* Screen 1 — Email */
@@ -535,11 +544,11 @@ footer{border-top:1px solid var(--border);padding:28px 0;display:flex;justify-co
 .ask-sub{font-size:15px;color:var(--ink2);max-width:480px;margin:0 auto;line-height:1.7}
 
 .ask-input-wrap{position:relative;max-width:640px;margin:0 auto 48px}
-.ask-input-container{display:flex;align-items:center;background:var(--card);border:2px solid var(--border);border-radius:16px;padding:6px 8px 6px 20px;transition:.3s;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.ask-input-container{display:flex;align-items:center;gap:12px;background:var(--card);border:2px solid var(--border);border-radius:16px;padding:6px 8px 6px 20px;transition:.3s;box-shadow:0 2px 12px rgba(0,0,0,.06)}
 .ask-input-container:focus-within{border-color:#8b5cf6;box-shadow:0 0 0 4px rgba(139,92,246,.1),0 8px 32px rgba(139,92,246,.08)}
 .ask-input-container:focus-within .ask-input-icon{color:#8b5cf6}
-.ask-input-icon{color:var(--ink3);margin-right:12px;flex-shrink:0;transition:.3s}
-.ask-input{flex:1;background:none;border:none;font-family:var(--font);font-size:15px;color:var(--ink);outline:none;padding:12px 0}
+.ask-input-icon{color:var(--ink3);flex-shrink:0;transition:.3s}
+.ask-input{flex:1;background:none;border:none;font-family:var(--font);font-size:15px;color:var(--ink);outline:none;padding:12px 0;margin-right:4px}
 .ask-input::placeholder{color:var(--ink3);font-weight:500}
 .ask-send-btn{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#8b5cf6,#6366f1);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s;flex-shrink:0}
 .ask-send-btn:hover{transform:scale(1.05);box-shadow:0 4px 16px rgba(139,92,246,.4)}
@@ -565,11 +574,16 @@ footer{border-top:1px solid var(--border);padding:28px 0;display:flex;justify-co
 .ask-a-bubble{background:var(--card);border:1px solid var(--border);border-radius:16px 16px 16px 4px;padding:20px 24px;font-size:14px;color:var(--ink2);line-height:1.8;max-width:90%;box-shadow:0 2px 12px rgba(0,0,0,.05)}
 .ask-a-bubble .ask-a-name{font-family:var(--font-head);font-size:13px;font-weight:800;color:var(--ink);margin-bottom:10px;display:flex;align-items:center;gap:8px}
 .ask-a-bubble .ask-a-name::before{content:'';width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#8b5cf6,#6366f1)}
-.ask-typing{display:flex;gap:4px;padding:16px 20px;max-width:80px}
-.ask-typing span{width:8px;height:8px;border-radius:50%;background:var(--ink3);animation:askTyping .9s ease infinite}
-.ask-typing span:nth-child(2){animation-delay:.2s}
-.ask-typing span:nth-child(3){animation-delay:.4s}
-@keyframes askTyping{0%,80%,100%{transform:scale(.6);opacity:.4}40%{transform:scale(1);opacity:1}}
+/* Modern AI Loader */
+.ask-modern-loader{display:flex;align-items:center;gap:14px;padding:12px 20px;background:rgba(139,92,246,.06);border:1px solid rgba(139,92,246,.18);border-radius:16px;width:fit-content;animation:askFadeIn .3s ease;box-shadow:0 4px 24px rgba(139,92,246,.12);margin:8px 0}
+.ask-loader-orb{width:22px;height:22px;border:2.5px solid rgba(139,92,246,.25);border-top-color:#8b5cf6;border-radius:50%;animation:askSpin 1s linear infinite;box-shadow:0 0 14px rgba(139,92,246,.4);flex-shrink:0}
+.ask-loader-orb.pulse{animation:askSpin 1s linear infinite,askOrbPulse 1.5s ease-in-out infinite}
+@keyframes askSpin{to{transform:rotate(360deg)}}
+@keyframes askOrbPulse{0%,100%{transform:scale(1);box-shadow:0 0 14px rgba(139,92,246,.4)}50%{transform:scale(1.15);box-shadow:0 0 24px rgba(236,72,153,.6)}}
+.ask-loader-label{font-size:13px;font-weight:700;letter-spacing:.3px;background:linear-gradient(90deg,#8b5cf6,#6366f1,#8b5cf6);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:askShimmerText 2s linear infinite;transition:opacity .4s ease,transform .4s ease}
+.ask-loader-label.fade{opacity:0;transform:translateY(4px)}
+.ask-loader-label.highlight{background:linear-gradient(90deg,#ec4899,#8b5cf6,#ec4899);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+@keyframes askShimmerText{to{background-position:200% 0}}
 .ask-reset-btn{display:block;margin:20px auto 0;background:none;border:1.5px solid var(--border);border-radius:99px;padding:8px 20px;font-family:var(--font);font-size:12px;font-weight:600;color:var(--ink2);cursor:pointer;transition:.2s}
 .ask-reset-btn:hover{border-color:var(--ink);color:var(--ink)}
 
@@ -700,7 +714,7 @@ footer{border-top:1px solid var(--border);padding:28px 0;display:flex;justify-co
 <div class="ask-wrap">
   <div class="ask-hero">
     <div class="ask-badge">✦ AI-Powered</div>
-    <h1 class="ask-h1">Ask <span class="ask-gradient">Vinay</span></h1>
+    <h1 class="ask-h1">Know more about <span class="ask-gradient">Vinay</span></h1>
     <p class="ask-sub">Curious about my experience, approach, or product thinking? Ask anything — I'll answer based on my background.</p>
   </div>
 
@@ -737,7 +751,7 @@ footer{border-top:1px solid var(--border);padding:28px 0;display:flex;justify-co
 
   <div class="ask-response-area" id="ask-response-area"></div>
 
-  <div class="ask-powered">Powered by <span>Grok AI</span> · Grounded in Vinay's resume & experience</div>
+  <div class="ask-powered">Grounded in Vinay's resume & experience</div>
   <footer style="margin-top:48px"><div class="foot-logo">VB<span>.</span></div><div>© 2025 Vinay B · Senior Product Manager</div><div>Bengaluru, India</div></footer>
 </div>
 </div>
@@ -2028,18 +2042,23 @@ footer{border-top:1px solid var(--border);padding:28px 0;display:flex;justify-co
 
 <!-- ═══ PAYMENT JOURNEY OVERLAY ═══ -->
 <div id="pj-overlay" class="pj-overlay">
-  <!-- Progress bar -->
-  <div class="pj-progress"><div class="pj-progress-bar" id="pj-prog-bar" style="width:20%"></div></div>
-  <!-- Step indicators -->
-  <div class="pj-step-indicators" id="pj-step-dots">
-    <div class="pj-step-dot active" id="pj-dot-1"></div>
-    <div class="pj-step-dot" id="pj-dot-2"></div>
-    <div class="pj-step-dot" id="pj-dot-3"></div>
-    <div class="pj-step-dot" id="pj-dot-4"></div>
-    <div class="pj-step-dot" id="pj-dot-5"></div>
+  <!-- Top navigation bar -->
+  <div class="pj-topbar">
+    <div class="pj-progress"><div class="pj-progress-bar" id="pj-prog-bar" style="width:20%"></div></div>
+    <button class="pj-back" onclick="closePaymentJourney()">
+      <span class="pj-back-icon">←</span>
+      <span class="pj-back-text">Back to Experience</span>
+    </button>
+    <!-- Step indicators -->
+    <div class="pj-step-indicators" id="pj-step-dots">
+      <div class="pj-step-dot active" id="pj-dot-1"></div>
+      <div class="pj-step-dot" id="pj-dot-2"></div>
+      <div class="pj-step-dot" id="pj-dot-3"></div>
+      <div class="pj-step-dot" id="pj-dot-4"></div>
+      <div class="pj-step-dot" id="pj-dot-5"></div>
+    </div>
+    <div class="pj-topbar-right"></div>
   </div>
-  <!-- Back button -->
-  <button class="pj-back" onclick="closePaymentJourney()">← Back to Experience</button>
 
   <!-- SVG gradient for timer -->
   <svg width="0" height="0" style="position:absolute"><defs><linearGradient id="timerGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#8b5cf6"/></linearGradient></defs></svg>
@@ -2697,6 +2716,7 @@ Here is Vinay's complete professional context:
 ${VINAY_CONTEXT}`;
 
 let askAbortController = null;
+let askLoaderTimers = [];
 
 function askSubmit(){
   const input = document.getElementById('ask-input');
@@ -2712,24 +2732,71 @@ function askFromExample(el){
   askWithGrok(q);
 }
 
+function updateLoaderSmooth(newText, isHighlight){
+  const label = document.getElementById('ask-label');
+  const orb = document.getElementById('ask-orb');
+  if(!label || !orb) return;
+
+  label.classList.add('fade');
+  askLoaderTimers.push(setTimeout(() => {
+    const lbl = document.getElementById('ask-label');
+    const o = document.getElementById('ask-orb');
+    if(!lbl || !o) return;
+    lbl.textContent = newText;
+    if(isHighlight){
+      lbl.classList.add('highlight');
+      o.classList.add('pulse');
+    } else {
+      lbl.classList.remove('highlight');
+      o.classList.remove('pulse');
+    }
+    lbl.classList.remove('fade');
+  }, 400));
+}
+
 async function askWithGrok(question){
   const exSection = document.getElementById('ask-examples-section');
   const respArea = document.getElementById('ask-response-area');
   exSection.style.display = 'none';
   respArea.classList.add('visible');
 
-  // Show question bubble + typing indicator
+  // Show question bubble + dynamic loader box
   respArea.innerHTML = `
     <div class="ask-q-bubble">${escHtml(question)}</div>
     <div class="ask-a-bubble">
       <div class="ask-a-name">Vinay B</div>
-      <div class="ask-typing"><span></span><span></span><span></span></div>
+      <div id="ask-loader-box">
+        <div class="ask-modern-loader">
+          <div class="ask-loader-orb" id="ask-orb"></div>
+          <div class="ask-loader-label" id="ask-label">Synthesizing Vinay's experiences...</div>
+        </div>
+      </div>
     </div>
   `;
 
-  // Abort any previous request
+  // Abort any previous request and clear timers
   if(askAbortController) askAbortController.abort();
   askAbortController = new AbortController();
+
+  askLoaderTimers.forEach(t => clearTimeout(t));
+  askLoaderTimers = [];
+
+  // Setup dynamic loader phases with buttery-smooth transitions
+  askLoaderTimers.push(setTimeout(() => {
+    updateLoaderSmooth("Just a little more time...", true);
+  }, 4000));
+
+  askLoaderTimers.push(setTimeout(() => {
+    updateLoaderSmooth("Synthesizing Vinay's experiences...", false);
+  }, 6000));
+
+  askLoaderTimers.push(setTimeout(() => {
+    updateLoaderSmooth("Fetching best possible answer from my vast experience...", true);
+  }, 8000));
+
+  askLoaderTimers.push(setTimeout(() => {
+    updateLoaderSmooth("Synthesizing Vinay's experiences...", false);
+  }, 10000));
 
   try {
     console.log("[Grok AI Worker] Sending request for question:", question);
@@ -2752,6 +2819,9 @@ async function askWithGrok(question){
     console.log("[Grok AI Worker] Response received with status:", response.status);
 
     const data = await response.json().catch(() => ({}));
+
+    askLoaderTimers.forEach(t => clearTimeout(t));
+    askLoaderTimers = [];
 
     if(!response.ok){
       console.error("[Grok AI Worker] API Error Data:", data);
@@ -2777,6 +2847,9 @@ async function askWithGrok(question){
 
   } catch(err){
     console.error("[Grok AI Worker] Catch Error:", err);
+    askLoaderTimers.forEach(t => clearTimeout(t));
+    askLoaderTimers = [];
+
     const isTimeout = err === 'timeout' || err.name === 'AbortError';
     const errMsg = isTimeout 
       ? "Request timed out (25s). Please check your internet connection or verify if your Cloudflare Worker is active."
@@ -2819,6 +2892,8 @@ function renderMarkdown(text){
 
 function askReset(){
   if(askAbortController){ askAbortController.abort(); askAbortController = null; }
+  askLoaderTimers.forEach(t => clearTimeout(t));
+  askLoaderTimers = [];
   document.getElementById('ask-examples-section').style.display = 'block';
   const respArea = document.getElementById('ask-response-area');
   respArea.classList.remove('visible');
