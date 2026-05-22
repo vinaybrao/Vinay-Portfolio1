@@ -13,6 +13,7 @@
 </head>
 <body>
 
+<div class="noise-overlay"></div>
 <nav>
   <div class="nav-inner">
     <div class="nav-logo">VB<span>.</span></div>
@@ -21,9 +22,11 @@
       <button class="nav-tab" onclick="showTab('ask',this)">Ask</button>
       <button class="nav-tab" onclick="showTab('casestudies',this)">Case Studies</button>
       <button class="nav-tab" onclick="showTab('experience',this)">Experience</button>
-
     </div>
-    
+    <div class="nav-right">
+      <a href="mailto:braovinay@gmail.com" class="nav-cta">Get in touch ↗</a>
+      <button id="editToggle" class="edit-toggle" style="display:none" onclick="toggleEdit()">✦ Edit</button>
+    </div>
   </div>
 </nav>
 
@@ -34,11 +37,23 @@
   <div class="hero reveal-up">
     <div class="hero-left">
       <div class="hero-avail">Open to new opportunities</div>
-      <h1 class="hero-h1">Senior<br>Product<br><span class="acc">Manager.</span></h1>
+      <h1 class="hero-h1">Senior<br><span class="acc">Product Manager.</span></h1>
       <p class="hero-desc" id="h-desc">12+ years building and scaling products across B2B SaaS, Payments, Analytics, and AI Automation.</p>
       <div class="hero-ctas">
-        <a href="mailto:braovinay@gmail.com" id="h-email-btn" class="cta-primary">Get in touch</a>
-        <a href="https://www.linkedin.com/in/vinaybrao/" id="h-li-btn" target="_blank" class="cta-ghost">LinkedIn ↗</a>
+        <a href="mailto:braovinay@gmail.com" id="h-email-btn" class="cta-primary">Get in touch ↗</a>
+        <a href="https://www.linkedin.com/in/vinaybrao/" id="h-li-btn" target="_blank" class="cta-ghost">LinkedIn in</a>
+      </div>
+      <div class="hero-tools">
+        <div class="hero-tools-label">Tech &amp; Tools</div>
+        <div class="hero-tool-icons">
+          <div class="tool-icon" title="Slack">💬</div>
+          <div class="tool-icon" title="Notion">📝</div>
+          <div class="tool-icon" title="Figma">🎨</div>
+          <div class="tool-icon" title="Photoshop">🖼️</div>
+          <div class="tool-icon" title="VS Code">💻</div>
+          <div class="tool-icon" title="Framer">⚡</div>
+          <div class="tool-icon" title="GitHub">🐙</div>
+        </div>
       </div>
       <div class="hero-tags" id="h-tags"></div>
       <div id="hero-edit-btn" style="display:none;margin-top:16px"><button class="edit-btn" onclick="startEdit('hero')">Edit hero</button></div>
@@ -46,19 +61,41 @@
     </div>
     <div class="hero-right">
       <div class="avatar-card">
-        <div class="avatar-circle"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
-        <div class="avatar-info"><div class="name">Vinay B</div><div class="role">Senior Product Manager</div><div class="loc" id="h-loc-card">📍 Bengaluru, India</div></div>
-      </div>
-      <div class="hcard">
-        <div class="hcard-label">Quick stats</div>
-        <div class="stat-row">
-          <div><div class="stat-num"><span class="acc">$400K+</span></div><div class="stat-desc">ARR growth</div></div>
-          <div><div class="stat-num"><span class="acc">$1.3M</span></div><div class="stat-desc">ARR deal closed</div></div>
-          <div><div class="stat-num">90%</div><div class="stat-desc">Ticket reduction</div></div>
-          <div><div class="stat-num">240</div><div class="stat-desc">Hrs/week saved</div></div>
+        <div class="avatar-circle">VB</div>
+        <div class="avatar-info">
+          <div class="name">Vinay B</div>
+          <div class="role">Senior Product Manager</div>
+          <div class="loc" id="h-loc-card">📍 Bengaluru, India</div>
         </div>
       </div>
-      <div class="hcard"><div class="hcard-exp"><div class="exp-big">12+</div><div class="exp-label">Years of product experience</div></div></div>
+      <div class="hcard">
+        <div class="hcard-label">Quick Stats</div>
+        <div class="stat-row">
+          <div class="stat-item">
+            <div class="stat-icon">📈</div>
+            <div><div class="stat-num acc">$400K+</div><div class="stat-desc">ARR growth</div></div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">💰</div>
+            <div><div class="stat-num acc">$1.3M</div><div class="stat-desc">ARR deal closed</div></div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">⚡</div>
+            <div><div class="stat-num purple">90%</div><div class="stat-desc">Ticket reduction</div></div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">⏱️</div>
+            <div><div class="stat-num purple">240</div><div class="stat-desc">Hrs/week saved</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="hcard">
+        <div class="hcard-exp">
+          <div class="exp-big-icon">⭐</div>
+          <div class="exp-big">12+</div>
+          <div class="exp-label">Years of product experience</div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="ticker-outer"><div class="ticker" id="ticker"></div></div>

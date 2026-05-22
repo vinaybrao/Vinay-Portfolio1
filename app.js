@@ -3,7 +3,7 @@ let D={
   desc:"12+ years building and scaling products across B2B SaaS, Payments, Analytics, and AI Automation.",
   location:"Bengaluru, India",phone:"+91 97317 36046",
   email:"braovinay@gmail.com",linkedin:"https://www.linkedin.com/in/vinaybrao/",
-  tags:["B2B SaaS","API-first","AI Automation","Payments","Platform Strategy","Analytics","12+ Years"],
+  tags:["🏢 B2B SaaS","🔌 API-first","🤖 AI Automation","💳 Payments","📱 Platform Strategy","📊 Analytics","📅 12+ Years Experience"],
   summary:"Senior Product Manager with 12+ years of experience across B2B SaaS, platform products, analytics, payments, and AI-enabled automation. Proven track record of building and scaling API-first products, payment microservices, and workflow automation platforms delivering $400K+ ARR growth and $200K+ cost savings. Strong expertise in product strategy, experimentation, platform architecture, cross-functional leadership, and data-driven decision making. Passionate about AI-native products, developer platforms, startups, and scalable SaaS ecosystems.",
   metrics:[
     {num:"$400K+",desc:"ARR growth delivered"},{num:"$200K+",desc:"Cost savings achieved"},
