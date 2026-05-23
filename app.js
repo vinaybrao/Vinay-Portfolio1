@@ -608,3 +608,180 @@ function askReset(){
   respArea.innerHTML = '';
   document.getElementById('ask-input').value = '';
 }
+
+// ═══════════════════════════════════════════════════════════
+// CONTACT POPUP
+// ═══════════════════════════════════════════════════════════
+function openContactPopup() {
+  document.getElementById('contact-popup').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeContactPopup() {
+  document.getElementById('contact-popup').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeContactPopup();
+});
+
+// ═══════════════════════════════════════════════════════════
+// FIERY PARTICLE ANIMATION
+// ═══════════════════════════════════════════════════════════
+(function initParticles() {
+  const canvas = document.getElementById('particleCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [], mouse = { x: -1000, y: -1000 };
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  // Track mouse for subtle interaction
+  document.addEventListener('mousemove', e => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+
+  // Color palette — fiery orange, warm red, soft purple
+  const colors = [
+    [255, 107, 43],   // orange
+    [255, 140, 60],   // light orange
+    [232, 69, 60],    // red
+    [192, 48, 96],    // magenta
+    [157, 78, 221],   // purple
+    [123, 47, 190],   // deep purple
+    [255, 165, 80],   // warm amber
+  ];
+
+  class Particle {
+    constructor() { this.reset(true); }
+    reset(init) {
+      const side = Math.random();
+      // Most particles spawn from the bottom/right area
+      if (side < 0.6) {
+        // Bottom edge
+        this.x = Math.random() * W;
+        this.y = H + Math.random() * 40;
+      } else if (side < 0.85) {
+        // Right edge
+        this.x = W + Math.random() * 30;
+        this.y = H * 0.5 + Math.random() * H * 0.5;
+      } else {
+        // Bottom-left
+        this.x = Math.random() * W * 0.3;
+        this.y = H + Math.random() * 30;
+      }
+      if (init) {
+        this.x = Math.random() * W;
+        this.y = H * 0.5 + Math.random() * H * 0.5;
+      }
+      this.radius = 0.8 + Math.random() * 2.2;
+      this.baseRadius = this.radius;
+      const c = colors[Math.floor(Math.random() * colors.length)];
+      this.r = c[0]; this.g = c[1]; this.b = c[2];
+      this.alpha = 0.15 + Math.random() * 0.45;
+      this.baseAlpha = this.alpha;
+
+      // Movement: mostly upward and slightly left (like rising embers)
+      this.vx = -0.3 + Math.random() * 0.6;
+      this.vy = -(0.2 + Math.random() * 0.8);
+
+      // Sinusoidal drift
+      this.sinAmp = 0.3 + Math.random() * 0.8;
+      this.sinFreq = 0.005 + Math.random() * 0.015;
+      this.sinOffset = Math.random() * Math.PI * 2;
+      this.age = 0;
+      this.maxAge = 300 + Math.random() * 600;
+      this.glowSize = 6 + Math.random() * 18;
+    }
+    update() {
+      this.age++;
+      // Fade in/out
+      const lifeFrac = this.age / this.maxAge;
+      if (lifeFrac < 0.1) {
+        this.alpha = this.baseAlpha * (lifeFrac / 0.1);
+      } else if (lifeFrac > 0.7) {
+        this.alpha = this.baseAlpha * (1 - (lifeFrac - 0.7) / 0.3);
+      } else {
+        this.alpha = this.baseAlpha;
+      }
+
+      // Drift
+      this.x += this.vx + Math.sin(this.age * this.sinFreq + this.sinOffset) * this.sinAmp;
+      this.y += this.vy;
+
+      // Subtle mouse repulsion
+      const dx = this.x - mouse.x;
+      const dy = this.y - mouse.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 120) {
+        const force = (120 - dist) / 120 * 0.5;
+        this.x += (dx / dist) * force;
+        this.y += (dy / dist) * force;
+        this.radius = this.baseRadius * (1 + (120 - dist) / 120 * 0.5);
+      } else {
+        this.radius = this.baseRadius;
+      }
+
+      if (this.age >= this.maxAge || this.y < -20 || this.x < -40 || this.x > W + 40) {
+        this.reset(false);
+      }
+    }
+    draw() {
+      if (this.alpha <= 0) return;
+      // Glow
+      const grd = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.glowSize);
+      grd.addColorStop(0, `rgba(${this.r},${this.g},${this.b},${this.alpha * 0.3})`);
+      grd.addColorStop(1, `rgba(${this.r},${this.g},${this.b},0)`);
+      ctx.fillStyle = grd;
+      ctx.fillRect(this.x - this.glowSize, this.y - this.glowSize, this.glowSize * 2, this.glowSize * 2);
+      // Core dot
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${this.r},${this.g},${this.b},${this.alpha})`;
+      ctx.fill();
+    }
+  }
+
+  // Spawn particles — more at bottom area
+  const count = Math.min(120, Math.floor(W * H / 12000));
+  for (let i = 0; i < count; i++) particles.push(new Particle());
+
+  // Draw flowing fiery lines (like the reference image)
+  function drawFlowLines(time) {
+    ctx.save();
+    ctx.globalCompositeOperation = 'lighter';
+    for (let i = 0; i < 3; i++) {
+      ctx.beginPath();
+      const yBase = H * (0.75 + i * 0.08);
+      const hue = i === 0 ? [255, 107, 43] : i === 1 ? [232, 69, 60] : [157, 78, 221];
+      ctx.strokeStyle = `rgba(${hue[0]},${hue[1]},${hue[2]},0.04)`;
+      ctx.lineWidth = 1.5 + i * 0.5;
+      for (let x = 0; x <= W; x += 3) {
+        const y = yBase
+          + Math.sin(x * 0.003 + time * 0.0005 + i) * 30
+          + Math.sin(x * 0.007 + time * 0.001 + i * 2) * 15
+          + Math.cos(x * 0.002 + time * 0.0003) * 20;
+        if (x === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  let animFrame;
+  function animate(time) {
+    ctx.clearRect(0, 0, W, H);
+    drawFlowLines(time || 0);
+    ctx.globalCompositeOperation = 'lighter';
+    particles.forEach(p => { p.update(); p.draw(); });
+    ctx.globalCompositeOperation = 'source-over';
+    animFrame = requestAnimationFrame(animate);
+  }
+  animate(0);
+})();

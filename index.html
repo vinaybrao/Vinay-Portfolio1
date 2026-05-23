@@ -14,6 +14,43 @@
 <body>
 
 <div class="noise-overlay"></div>
+<canvas id="particleCanvas"></canvas>
+
+<!-- ═══ CONTACT POPUP ═══ -->
+<div id="contact-popup" class="contact-popup">
+  <div class="contact-popup-backdrop" onclick="closeContactPopup()"></div>
+  <div class="contact-popup-card">
+    <button class="contact-popup-close" onclick="closeContactPopup()">✕</button>
+    <div class="contact-popup-title">Let's Connect</div>
+    <div class="contact-popup-subtitle">Feel free to reach out — I'd love to hear from you.</div>
+    <div class="contact-popup-items">
+      <a href="mailto:braovinay@gmail.com" class="contact-item">
+        <div class="contact-item-icon">✉️</div>
+        <div class="contact-item-info">
+          <div class="contact-item-label">Email</div>
+          <div class="contact-item-value">braovinay@gmail.com</div>
+        </div>
+        <div class="contact-item-arrow">↗</div>
+      </a>
+      <a href="tel:+919731736046" class="contact-item">
+        <div class="contact-item-icon">📱</div>
+        <div class="contact-item-info">
+          <div class="contact-item-label">Phone</div>
+          <div class="contact-item-value">+91 97317 36046</div>
+        </div>
+        <div class="contact-item-arrow">↗</div>
+      </a>
+      <a href="https://www.linkedin.com/in/vinaybrao/" target="_blank" class="contact-item">
+        <div class="contact-item-icon">💼</div>
+        <div class="contact-item-info">
+          <div class="contact-item-label">LinkedIn</div>
+          <div class="contact-item-value">linkedin.com/in/vinaybrao</div>
+        </div>
+        <div class="contact-item-arrow">↗</div>
+      </a>
+    </div>
+  </div>
+</div>
 <nav>
   <div class="nav-inner">
     <div class="nav-logo">VB<span>.</span></div>
@@ -24,7 +61,7 @@
       <button class="nav-tab" onclick="showTab('experience',this)">Experience</button>
     </div>
     <div class="nav-right">
-      <a href="mailto:braovinay@gmail.com" class="nav-cta">Get in touch ↗</a>
+      <button class="nav-cta" onclick="openContactPopup()">Get in touch ↗</button>
       <button id="editToggle" class="edit-toggle" style="display:none" onclick="toggleEdit()">✦ Edit</button>
     </div>
   </div>
@@ -40,7 +77,7 @@
       <h1 class="hero-h1">Senior<br><span class="acc">Product Manager.</span></h1>
       <p class="hero-desc" id="h-desc">12+ years building and scaling products across B2B SaaS, Payments, Analytics, and AI Automation.</p>
       <div class="hero-ctas">
-        <a href="mailto:braovinay@gmail.com" id="h-email-btn" class="cta-primary">Get in touch ↗</a>
+        <button id="h-email-btn" class="cta-primary" onclick="openContactPopup()">Get in touch ↗</button>
         <a href="https://www.linkedin.com/in/vinaybrao/" id="h-li-btn" target="_blank" class="cta-ghost">LinkedIn in</a>
       </div>
       <div class="hero-tools">
