@@ -748,7 +748,7 @@ document.addEventListener('keydown', e => {
   }
 
   // Spawn particles — more at bottom area
-  const count = Math.min(120, Math.floor(W * H / 12000));
+  const count = Math.min(50, Math.floor(W * H / 25000));
   for (let i = 0; i < count; i++) particles.push(new Particle());
 
   // Draw flowing fiery lines (like the reference image)
