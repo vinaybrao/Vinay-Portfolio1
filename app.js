@@ -683,7 +683,7 @@ document.addEventListener('keydown', e => {
       this.baseRadius = this.radius;
       const c = colors[Math.floor(Math.random() * colors.length)];
       this.r = c[0]; this.g = c[1]; this.b = c[2];
-      this.alpha = 0.08 + Math.random() * 0.22;
+      this.alpha = 0.04 + Math.random() * 0.12;
       this.baseAlpha = this.alpha;
 
       // Movement: mostly upward and slightly left (like rising embers)
@@ -696,7 +696,7 @@ document.addEventListener('keydown', e => {
       this.sinOffset = Math.random() * Math.PI * 2;
       this.age = 0;
       this.maxAge = 300 + Math.random() * 600;
-      this.glowSize = 4 + Math.random() * 8;
+      this.glowSize = 2 + Math.random() * 4;
     }
     update() {
       this.age++;
@@ -748,7 +748,7 @@ document.addEventListener('keydown', e => {
   }
 
   // Spawn particles — more at bottom area
-  const count = 50;
+  const count = 20;
   for (let i = 0; i < count; i++) particles.push(new Particle());
 
   // Draw flowing fiery lines (like the reference image)
