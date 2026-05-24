@@ -46,6 +46,19 @@ function render(){
   if(document.getElementById('jobs-list')) document.getElementById('jobs-list').innerHTML=D.jobs.map((j,i)=>`<div class="job-card${i===0?' featured':''}"><div class="job-num">0${i+1}</div><div class="job-title">${j.title}</div><div class="job-co">${j.company}</div><div class="job-period">${j.period} · ${j.location||'Bengaluru'}</div><ul class="job-bullets">${j.bullets.map(b=>`<li>${hl(b)}</li>`).join('')}</ul></div>`).join('');
   if(document.getElementById('edu-card')) document.getElementById('edu-card').innerHTML=`<div class="edu-strip"><div class="edu-icon">🎓</div><div><div class="edu-inst">${D.education.institution}</div><div class="edu-deg">${D.education.degree}</div><div style="font-size:12px;color:var(--ink3);margin-top:4px;font-weight:500">📍 ${D.education.location}</div></div><div class="edu-year">2013</div></div>`;
   if(document.getElementById('targets-wrap')) document.getElementById('targets-wrap').innerHTML=D.targets.map(t=>`<span class="target-pill">${t}</span>`).join('');
+  if(document.getElementById('popup-email-link')) document.getElementById('popup-email-link').href='mailto:'+D.email+'?subject=Product%20Management%20Opportunity';
+  if(document.getElementById('popup-email-val')) document.getElementById('popup-email-val').textContent=D.email;
+  if(document.getElementById('popup-phone-link')) document.getElementById('popup-phone-link').href='tel:'+(D.phone ? D.phone.replace(/\s+/g, '') : '');
+  if(document.getElementById('popup-phone-val')) document.getElementById('popup-phone-val').textContent=D.phone;
+  if(document.getElementById('popup-li-link')) document.getElementById('popup-li-link').href=D.linkedin;
+  if(document.getElementById('popup-li-val')) {
+    try {
+      const url = new URL(D.linkedin);
+      document.getElementById('popup-li-val').textContent = (url.hostname + url.pathname).replace(/\/$/, '');
+    } catch(e) {
+      document.getElementById('popup-li-val').textContent = D.linkedin;
+    }
+  }
   renderProjects();
 }
 function renderProjects(){
