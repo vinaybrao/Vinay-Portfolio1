@@ -297,8 +297,8 @@ th{font-size:11px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-
 function toggleEdit(){
   editMode=!editMode;
   const b=document.getElementById('editToggle');
-  b.classList.toggle('on',editMode);b.textContent=editMode?'✓ Done':'✎ Edit';
-  document.getElementById('edit-bar').style.display=editMode?'flex':'none';
+  if(b){b.classList.toggle('on',editMode);b.textContent=editMode?'✓ Done':'✎ Edit';}
+  if(document.getElementById('edit-bar')) document.getElementById('edit-bar').style.display=editMode?'flex':'none';
   ['hero','sum','met','skl','exp','edu','tgt'].forEach(k=>{const el=document.getElementById(k+'-edit-btn');if(el)el.style.display=editMode?'inline-block':'none';});
   if(!editMode)closeAll();
 }
