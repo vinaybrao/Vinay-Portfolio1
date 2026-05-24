@@ -636,6 +636,23 @@ function closeContactPopup() {
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeContactPopup();
 });
+function handleEmailClick(e) {
+  const email = D.email || 'braovinay@gmail.com';
+  navigator.clipboard.writeText(email).then(() => {
+    const valEl = document.getElementById('popup-email-val');
+    if (valEl) {
+      const origText = valEl.textContent;
+      valEl.textContent = 'Copied to clipboard!';
+      valEl.style.color = '#25D366';
+      setTimeout(() => {
+        valEl.textContent = origText;
+        valEl.style.color = '';
+      }, 2000);
+    }
+  }).catch(err => {
+    console.error('Clipboard copy failed:', err);
+  });
+}
 
 // ═══════════════════════════════════════════════════════════
 // FIERY PARTICLE ANIMATION
