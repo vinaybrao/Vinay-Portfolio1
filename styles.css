@@ -1582,6 +1582,7 @@ textarea { resize: vertical; min-height: 80px; }
   background: rgba(4, 4, 16, .75);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  z-index: 1;
 }
 .contact-popup-card {
   position: relative;
@@ -1594,6 +1595,7 @@ textarea { resize: vertical; min-height: 80px; }
   transform: translateY(20px) scale(.96);
   transition: transform .35s ease;
   box-shadow: 0 24px 80px rgba(0,0,0,.6), 0 0 60px rgba(123,47,190,.15);
+  z-index: 2;
 }
 .contact-popup.open .contact-popup-card {
   transform: translateY(0) scale(1);
