@@ -410,10 +410,10 @@ nav {
   background: linear-gradient(145deg, #14142e, #1a1040);
   border: 1px solid var(--border2);
   border-radius: var(--r3);
-  padding: 22px 24px;
+  padding: 32px 30px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
   box-shadow: 0 4px 32px rgba(0,0,0,.4);
   position: relative;
   overflow: hidden;
@@ -422,14 +422,14 @@ nav {
   content: '';
   position: absolute;
   top: 0; right: 0;
-  width: 120px; height: 120px;
+  width: 140px; height: 140px;
   background: radial-gradient(circle at top right, rgba(123,47,190,.2), transparent 70%);
   pointer-events: none;
 }
 
 .avatar-circle {
-  width: 56px;
-  height: 56px;
+  width: 76px;
+  height: 76px;
   border-radius: 50%;
   background: linear-gradient(135deg, #7B2FBE, #c03060);
   display: flex;
@@ -437,7 +437,7 @@ nav {
   justify-content: center;
   flex-shrink: 0;
   font-family: var(--font-head);
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 900;
   color: #fff;
   border: 2px solid rgba(255,255,255,.15);
@@ -446,20 +446,20 @@ nav {
 
 .avatar-info .name {
   font-family: var(--font-head);
-  font-size: 18px;
+  font-size: 26px;
   font-weight: 800;
   color: #fff;
   letter-spacing: -.3px;
 }
 .avatar-info .role {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--ink2);
-  margin-top: 3px;
+  margin-top: 4px;
 }
 .avatar-info .loc {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--purple3);
-  margin-top: 5px;
+  margin-top: 7px;
   display: flex;
   align-items: center;
   gap: 4px;
