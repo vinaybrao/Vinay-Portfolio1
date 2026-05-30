@@ -80,6 +80,8 @@ The application has become a core operational asset:
 * **Efficiency:** Boosted the operations team's workflow efficiency by **70%**.
 * **Risk Mitigation:** Completely eliminated reliance on third-party software, securing 100% of the sensitive document pipeline locally.
 
+## NOTICE PERIOD
+My official notice period is 60 days however I will be able to negotiate it to 30 days. 
 
 ### TARGET ROLES
 Senior Product Manager, Group Product Manager, Technical Product Manager, AI Product Manager
