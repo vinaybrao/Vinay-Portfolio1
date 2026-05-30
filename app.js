@@ -488,8 +488,8 @@ async function askWithGrok(question){
   try {
     console.log("[Grok AI Worker] Sending request for question:", question);
     const body = {
-      question: question,
-      systemPrompt: SYSTEM_PROMPT
+      question: question
+      // systemPrompt intentionally omitted — owned by the Cloudflare Worker server-side
     };
 
     // Implement a 25-second timeout for Worker response
