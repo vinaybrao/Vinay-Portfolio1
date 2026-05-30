@@ -58,5 +58,28 @@ Senior Product Manager with 12+ years of experience across B2B SaaS, platform pr
 - $3M collected monthly through stamp duty payment platform
 - Built payment integrations with PhonePe & Razorpay
 
+### IMPACT & INNOVATION - THINGS I BUILT OVER AND ABOVEMY KRA
+# Case Study 1: Automated Stamp Paper Processing Tool
+
+## Context & Challenge
+The operations team was using two separate third-party tools to format and merge sensitive stamp papers. This workflow was highly inefficient and introduced significant risks to the business:
+* **Unreliability:** The tools frequently stalled, crashed, or failed during processing.
+* **Security Risks:** Processing highly sensitive financial and legal documents through unverified third-party platforms created data compliance and privacy vulnerabilities.
+* **Friction:** Fragmenting a simple process across multiple applications slowed down daily operations.
+
+## Solution & Technical Implementation
+To resolve these issues, I developed a lightweight, local desktop application that consolidated both tasks into a single, seamless pipeline. 
+
+* **Local Execution:** Built to run entirely on the user's local machine, ensuring sensitive data never leaves the internal environment and eliminating third-party security threats.
+* **High-Volume Batch Processing:** Engineered the application to ingest and process entire folders up to 500 MB in a single pass.
+* **Unified Pipeline:** Automatically corrects document formatting and merges the files into a single, standardized PDF output in one go.
+
+## Quantifiable Impact
+The application has become a core operational asset:
+* **Volume:** Securely processes over **40,000 PDFs per month**.
+* **Efficiency:** Boosted the operations team's workflow efficiency by **70%**.
+* **Risk Mitigation:** Completely eliminated reliance on third-party software, securing 100% of the sensitive document pipeline locally.
+
+
 ### TARGET ROLES
 Senior Product Manager, Group Product Manager, Technical Product Manager, AI Product Manager
