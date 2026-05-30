@@ -354,53 +354,10 @@ document.addEventListener('keydown', (e) => {
 setTimeout(observeElements, 100);
 
 // ── ASK VINAY — GROK AI (SECURE CLOUDFLARE WORKER) ──────────────────────────────────────────
+// Context & system prompt are managed entirely server-side in Cloudflare Worker KV.
+// To update Vinay's AI context, update the 'vinay_context' key in the KV namespace
+// on the Cloudflare dashboard — no code changes needed here.
 const CLOUDFLARE_WORKER_URL = 'https://vinay-portfolio-ai1.braovinay.workers.dev/';
-
-// ── CONTEXT LOADER — reads context.md at startup ──────────────────────────────
-// To update Vinay's AI context, simply edit context.md — no JS changes needed.
-const CONTEXT_MD_URL = 'context.md';
-
-// Fallback inline context used only if context.md cannot be fetched
-const FALLBACK_CONTEXT = `## VINAY B — RESUME & PROFESSIONAL CONTEXT
-(Context file could not be loaded. Please ensure context.md is available.)`;
-
-let VINAY_CONTEXT = FALLBACK_CONTEXT;
-let SYSTEM_PROMPT = buildSystemPrompt(FALLBACK_CONTEXT);
-
-function buildSystemPrompt(contextText) {
-  return `You are Vinay B, a Senior Product Manager with 12+ years of experience. You are answering questions from visitors on your portfolio website.
-
-IMPORTANT RULES:
-1. Answer ONLY based on the resume and professional context provided below. Do NOT make up or fabricate any information that is not in the context.
-2. Speak in first person as Vinay. Be warm, professional, and confident.
-3. When answering behavioral questions ("Tell me about a time..."), use the STAR format (Situation, Task, Action, Result) and ground your answers in the real experiences from the resume.
-4. If asked about something not covered in the context, honestly say "That's not something covered in my portfolio, but I'd love to discuss it — feel free to reach out at braovinay@gmail.com or connect on LinkedIn."
-5. Keep answers concise but thorough — aim for 150-300 words.
-6. Use markdown formatting: **bold** for emphasis, bullet points for lists.
-7. Always be authentic — these are real experiences, not hypotheticals.
-8. If someone asks irrelevant or off-topic questions (not related to professional/career topics), politely redirect them.
-
-Here is Vinay's complete professional context:
-${contextText}`;
-}
-
-// Fetch context.md on page load; silently falls back to inline copy on failure
-(async function loadContext() {
-  try {
-    const res = await fetch(CONTEXT_MD_URL + '?v=' + Date.now());
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const text = await res.text();
-    if (text && text.trim().length > 50) {
-      VINAY_CONTEXT = text;
-      SYSTEM_PROMPT = buildSystemPrompt(text);
-      console.log('[Ask Vinay] context.md loaded successfully (' + text.length + ' chars).');
-    } else {
-      throw new Error('context.md appears empty or too short');
-    }
-  } catch (err) {
-    console.warn('[Ask Vinay] Could not load context.md — using fallback context.', err.message);
-  }
-})();
 
 let askAbortController = null;
 let askLoaderTimers = [];

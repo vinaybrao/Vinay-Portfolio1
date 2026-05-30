@@ -58,7 +58,7 @@ Senior Product Manager with 12+ years of experience across B2B SaaS, platform pr
 - $3M collected monthly through stamp duty payment platform
 - Built payment integrations with PhonePe & Razorpay
 
-### IMPACT & INNOVATION - THINGS I BUILT OVER AND ABOVEMY KRA
+### IMPACT & INNOVATION - THINGS I BUILT OVER AND ABOVE MY KRA
 # Case Study 1: Automated Stamp Paper Processing Tool
 
 ## Context & Challenge
