@@ -23,7 +23,7 @@ The portfolio is designed as an interactive, premium showcase of Vinay B Rao's 1
 
 ### Key User Journeys
 1. **The Scanner Journey:** A recruiter lands on the portfolio, reviews the high-impact metrics (e.g. $400K+ ARR, 90% ticket reduction), reads the summary, and inspects the chronological employment history.
-2. **The Evaluator Journey (Case Studies):** A hiring manager navigates to the Case Studies tab and reads through detailed product discovery and GTM breakdowns for projects like *WhatsApp SafeChat* and *Rapido Wanderlust*.
+2. **The Evaluator Journey (Case Studies):** A hiring manager navigates to the Case Studies tab and reads through detailed product discovery and GTM breakdowns for projects like *WhatsApp SafeChat*, *Rapido Wanderlust*, and *Increasing Course Completion Rates* (Coursera).
 3. **The Interactive Validation Journey (Demos):** An engineer or product leader opens the Experience tab and triggers the payment simulation to verify user experience design, edge-case handling (timeouts), and system flow.
 4. **The Interview Prep Journey (AI Chat):** A team member preparing to interview Vinay uses the "Ask" tab to submit queries (e.g., "Tell me about a time you shipped with limited resources") and receives warm, professional answers in the first person.
 
@@ -103,9 +103,9 @@ Vinay-Portfolio1/
 ### File and Folder Descriptions
 
 * **[index.html](file:///c:/Users/HP/Documents/Projects/Vinay-Portfolio1/index.html):**
-  * *Purpose:* Defines the semantic structure of all four tabs, hosts the SVG elements, contains the inline entity-encoded case studies (`srcdoc` of iframes), and holds modal popups.
+  * *Purpose:* Defines the semantic structure of all four tabs, hosts the SVG elements, contains the native HTML case studies (WhatsApp, Rapido, and Coursera), and holds modal popups.
   * *Dependencies:* Links directly to [styles.css](file:///c:/Users/HP/Documents/Projects/Vinay-Portfolio1/styles.css) and loads [app.js](file:///c:/Users/HP/Documents/Projects/Vinay-Portfolio1/app.js) using the `defer` attribute.
-  * *Important Notes:* Large case studies are loaded inside sandbox iframes via `srcdoc` to prevent CSS bleed and style collisions.
+  * *Important Notes:* Case studies are embedded as native HTML containers styled specifically with scoped CSS prefixes to prevent styling collisions.
 
 * **[styles.css](file:///c:/Users/HP/Documents/Projects/Vinay-Portfolio1/styles.css):**
   * *Purpose:* Configures the design tokens, fonts, responsive grids, and transitions.
@@ -152,9 +152,9 @@ Vinay-Portfolio1/
 
 ## Tab 3: Case Studies View (`#tab-casestudies`)
 * **Purpose:** Hosts structured PM case studies.
-* **User Flow:** User clicks a card (e.g., "WhatsApp SafeChat" or "Rapido Wanderlust"), which slides open a full-viewport modal overlays containing the case study iframe.
+* **User Flow:** User clicks a card (e.g., "WhatsApp SafeChat", "Rapido Wanderlust", or "Increasing Course Completion Rates"), which slides open a full-viewport modal overlay containing the case study detail view.
 * **Key Components:**
-  * **Interactive Iframe (`iframe srcdoc="..."`):** Encapsulated document isolates case study styles.
+  * **Case Study Details (e.g., #cs-wa, #cs-rapido, #cs-coursera):** Scoped native HTML containers showing comprehensive project details.
   * **Back Button:** Custom floating blur-backdrop button.
 
 ## Tab 4: Experience / Live Demos View (`#tab-experience`)
@@ -385,13 +385,13 @@ Cloudflare Workers can be updated via the Cloudflare web dashboard or using the 
 ### Metrics & Diagnostics
 * **Initial Page Load:** Very fast (~300ms) because all assets are static, pre-rendered, and distributed via CDN.
 * **Bundle Sizes:**
-  * `index.html` ~79KB (Contains embedded SVG and iframe templates)
-  * `styles.css` ~78KB (Modular CSS declarations)
-  * `app.js` ~42KB (Core scripts)
+  * `index.html` ~93KB (Contains embedded SVG and case study layouts)
+  * `styles.css` ~106KB (Modular CSS declarations, including scoped case study stylesheets)
+  * `app.js` ~47KB (Core scripts)
 * **API Latency:** Grok API completion takes between 1.5s to 3s depending on prompt depth and response length.
 
 ### Suggestions for Improvement
-* **Case Study Lazy-Loading:** Currently, the case studies are embedded inside `<iframe srcdoc="...">` directly within `index.html`. For better memory footprints on low-end devices, extract these into external static HTML files and load them dynamically when clicked (e.g., `<iframe src="casestudies/wa.html">`).
+* **Case Study Lazy-Loading:** Currently, the case studies are embedded inside static HTML directly in `index.html`. For faster initial loads, these could be extracted into external static HTML sheets and fetched dynamically on click (using AJAX `fetch`).
 * **Critical CSS Pathing:** Inline the main layout tokens in `index.html` and defer loading of non-critical CSS templates.
 
 ---
@@ -418,11 +418,12 @@ The resume content is managed in **two places**:
 3. Locate `vinay_context`, click edit, find the line `### NOTICE PERIOD`, and update the text. Click Save.
 
 #### Scenario B: Adding a New Case Study
-1. Create your case study layout.
+1. Create your case study layout using native HTML.
 2. Open `index.html`.
 3. Locate the `<!-- ═══ CASE STUDIES ═══ -->` section and add your card structure.
-4. Locate the detail modal blocks at the bottom, clone an existing iframe modal structure (e.g. `#cs-rapido`), and insert your updated `srcdoc` code.
-5. In `app.js`, add the click click-handlers to display and close the new study ID.
+4. Locate the detail modal blocks at the bottom, clone an existing structure (e.g., `#cs-coursera`), and insert your updated HTML code.
+5. In `styles.css`, write scoped styles for your case study using a specific prefix (e.g., `.crs-` or `.rp-`) to prevent CSS bleed.
+6. In `app.js`, the click handlers are attached automatically via the event delegation setup in the `.cs-grid` listener, which reads the `data-study` attribute (e.g., `data-study="wa"` maps to opening `#cs-wa`).
 
 ---
 
