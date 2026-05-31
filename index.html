@@ -279,6 +279,36 @@
         </div>
       </div>
     </div>
+    <!-- Coursera Completion Card -->
+    <div class="cs-card" tabindex="0" role="button" aria-label="Open Coursera course completion case study" data-study="coursera">
+      <div class="cs-thumb cs-thumb-coursera">
+        <div class="cs-thumb-inner">
+          <div style="width:52px;height:52px;background:#0056D2;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:4px;box-shadow:0 8px 24px rgba(0,86,210,.4)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/><path d="M10 8h2v8h-2zm4 0h2v8h-2z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l7 4.5-7 4.5z"/></svg>
+          </div>
+          <div class="coursera-logo">Coursera</div>
+          <div class="coursera-tag">Growth Strategy</div>
+        </div>
+      </div>
+      <div class="cs-body">
+        <div class="cs-meta-row">
+          <span class="cs-category">Growth · EdTech</span>
+          <span class="cs-company">Coursera</span>
+        </div>
+        <div class="cs-title">Increasing Course Completion Rates</div>
+        <div class="cs-desc">A product strategy case study exploring how Coursera can raise its 18% course completion rate through habit formation, personalization, social accountability, and a flagship "Tailor Your Own Course" feature.</div>
+        <div class="cs-tags">
+          <span class="cs-pill">Product Strategy</span>
+          <span class="cs-pill">Growth</span>
+          <span class="cs-pill">Gamification</span>
+          <span class="cs-pill">Personalization</span>
+        </div>
+        <div class="cs-footer">
+          <div class="cs-read">Read case study <span class="cs-arrow">→</span></div>
+          <div style="font-size:12px;font-weight:600;color:var(--ink3)">3 personas · 7 solutions</div>
+        </div>
+      </div>
+    </div>
   </div>
   <footer style="margin-top:48px"><div class="foot-logo">VB<span>.</span></div><div>© 2025 Vinay B · Senior Product Manager</div><div>Bengaluru, India</div></footer>
 </div>
@@ -332,1066 +362,221 @@
 
 
 <!-- ═══ CASE STUDY DETAIL: Rapido Wanderlust ═══ -->
-<div id="cs-rapido" class="cs-detail" style="background:#0f1115;">
-  
-<button 
-  class="cs-back" 
-  aria-label="Back to Case Studies"
-  style="
-    top:20px;
-    left:20px;
-    z-index:2000;
-    background:rgba(15,17,21,.92);
-    border:1px solid rgba(255,255,255,.12);
-    backdrop-filter:blur(16px);
-  ">
-  ← Back to Case Studies
-</button>
-
-
-  <iframe
-    srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;UTF-8&quot; /&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-  &lt;title&gt;Rapido Wanderlust Case Study | Vinay B Rao&lt;/title&gt;
-  &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
-  &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
-  &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
-  &lt;style&gt;
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: &#x27;Inter&#x27;, sans-serif;
-      background: #0f1115;
-      color: #ffffff;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    :root {
-      --yellow: #ffd400;
-      --dark: #0f1115;
-      --card: #181b22;
-      --border: rgba(255,255,255,0.08);
-      --text: #e6e6e6;
-      --muted: #9ea3ae;
-      --gradient: linear-gradient(135deg, #ffd400 0%, #ffb700 100%);
-    }
-
-    .container {
-      width: min(1200px, 92%);
-      margin: auto;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      backdrop-filter: blur(14px);
-      background: rgba(15,17,21,0.85);
-      border-bottom: 1px solid var(--border);
-      z-index: 999;
-    }
-
-    .nav-wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0;
-    }
-
-    .logo {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--yellow);
-      letter-spacing: 1px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: 0.3s ease;
-      opacity: 0.8;
-    }
-
-    .nav-links a:hover {
-      color: var(--yellow);
-      opacity: 1;
-    }
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at top right, rgba(255,212,0,0.18), transparent 30%),
-        radial-gradient(circle at bottom left, rgba(255,212,0,0.12), transparent 25%),
-        #0f1115;
-    }
-
-    .hero-content {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      align-items: center;
-      gap: 60px;
-      padding-top: 100px;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(255,212,0,0.12);
-      border: 1px solid rgba(255,212,0,0.25);
-      padding: 10px 18px;
-      border-radius: 999px;
-      color: var(--yellow);
-      margin-bottom: 24px;
-      font-weight: 600;
-    }
-
-    h1 {
-      font-size: clamp(3rem, 8vw, 6rem);
-      line-height: 1;
-      margin-bottom: 24px;
-      font-weight: 800;
-    }
-
-    .highlight {
-      color: var(--yellow);
-    }
-
-    .hero p {
-      color: var(--muted);
-      font-size: 1.15rem;
-      margin-bottom: 34px;
-      max-width: 650px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 16px 28px;
-      border-radius: 14px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .btn-primary {
-      background: var(--gradient);
-      color: black;
-      box-shadow: 0 10px 30px rgba(255,212,0,0.25);
-    }
-
-    .btn-secondary {
-      border: 1px solid var(--border);
-      color: white;
-      background: rgba(255,255,255,0.03);
-    }
-
-    .btn:hover {
-      transform: translateY(-4px);
-    }
-
-    .hero-card {
-      background: linear-gradient(180deg, rgba(255,212,0,0.12), rgba(255,255,255,0.02));
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 32px;
-      padding: 40px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card::before {
-      content: &#x27;&#x27;;
-      position: absolute;
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background: rgba(255,212,0,0.15);
-      top: -100px;
-      right: -100px;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      margin-top: 28px;
-    }
-
-    .stat-box {
-      background: rgba(255,255,255,0.04);
-      padding: 20px;
-      border-radius: 20px;
-      border: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .stat-box h3 {
-      color: var(--yellow);
-      font-size: 2rem;
-      margin-bottom: 8px;
-    }
-
-    section {
-      padding: 110px 0;
-    }
-
-    .section-header {
-      margin-bottom: 60px;
-    }
-
-    .section-label {
-      color: var(--yellow);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      margin-bottom: 18px;
-    }
-
-    .section-description {
-      color: var(--muted);
-      max-width: 760px;
-      font-size: 1.05rem;
-    }
-
-    .overview-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 24px;
-      padding: 30px;
-      border: 1px solid var(--border);
-      transition: all 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(255,212,0,0.4);
-    }
-
-    .card h3 {
-      margin-bottom: 14px;
-      font-size: 1.25rem;
-    }
-
-    .card p,
-    .card li {
-      color: var(--muted);
-    }
-
-    .card ul {
-      padding-left: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .problem-box {
-      background: linear-gradient(135deg, rgba(255,212,0,0.12), rgba(255,255,255,0.03));
-      border: 1px solid rgba(255,212,0,0.25);
-      border-radius: 32px;
-      padding: 50px;
-    }
-
-    .problem-box h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .problem-box p {
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .persona-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-    }
-
-    .persona-card {
-      background: var(--card);
-      border-radius: 28px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-
-    .persona-content {
-      padding: 28px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .persona-header {
-      background: var(--gradient);
-      color: black;
-      padding: 24px;
-      font-weight: 800;
-      font-size: 1.2rem;
-      height: 110px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      line-height: 1.4;
-    }
-
-    
-
-    .persona-content h4 {
-      color: var(--yellow);
-      margin: 24px 0 12px;
-    }
-
-    .persona-content ul {
-      padding-left: 18px;
-      color: var(--muted);
-    }
-
-    .table-wrapper {
-      overflow-x: auto;
-      border-radius: 24px;
-      border: 1px solid var(--border);
-      background: var(--card);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 850px;
-    }
-
-    th, td {
-      padding: 20px;
-      text-align: left;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-
-    th {
-      background: rgba(255,212,0,0.08);
-      color: var(--yellow);
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    td {
-      color: var(--muted);
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 22px;
-    }
-
-    .feature-box {
-      background: linear-gradient(180deg, rgba(255,212,0,0.08), rgba(255,255,255,0.02));
-      padding: 28px;
-      border-radius: 24px;
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .feature-box span {
-      font-size: 2rem;
-      display: block;
-      margin-bottom: 18px;
-    }
-
-    .journey {
-      display: grid;
-      gap: 28px;
-    }
-
-    .journey-step {
-      display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 28px;
-      align-items: start;
-    }
-
-    .step-number {
-      width: 70px;
-      height: 70px;
-      border-radius: 20px;
-      background: var(--gradient);
-      color: black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.5rem;
-    }
-
-    .step-card {
-      background: var(--card);
-      padding: 32px;
-      border-radius: 24px;
-      border: 1px solid var(--border);
-    }
-
-    .step-card h3 {
-      margin-bottom: 16px;
-    }
-
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-
-    .metric-card {
-      background: var(--card);
-      padding: 28px;
-      border-radius: 24px;
-      border: 1px solid var(--border);
-    }
-
-    .metric-card h3 {
-      color: var(--yellow);
-      margin-bottom: 16px;
-    }
-
-    .metric-card ul {
-      padding-left: 18px;
-      color: var(--muted);
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .timeline {
-      position: relative;
-      margin-top: 30px;
-    }
-
-    .timeline::before {
-      content: &#x27;&#x27;;
-      position: absolute;
-      left: 16px;
-      top: 0;
-      width: 2px;
-      height: 100%;
-      background: rgba(255,255,255,0.08);
-    }
-
-    .timeline-item {
-      position: relative;
-      padding-left: 60px;
-      margin-bottom: 40px;
-    }
-
-    .timeline-dot {
-      position: absolute;
-      left: 0;
-      top: 8px;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: var(--gradient);
-    }
-
-    .timeline-card {
-      background: var(--card);
-      border-radius: 24px;
-      padding: 28px;
-      border: 1px solid var(--border);
-    }
-
-    .timeline-card h3 {
-      margin-bottom: 18px;
-    }
-
-    .timeline-card ul {
-      padding-left: 18px;
-      color: var(--muted);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    footer {
-      padding: 80px 0;
-      text-align: center;
-      border-top: 1px solid var(--border);
-    }
-
-    footer h2 {
-      font-size: 3rem;
-      margin-bottom: 14px;
-    }
-
-    footer p {
-      color: var(--muted);
-      margin-bottom: 30px;
-    }
-
-    @media(max-width: 900px) {
-      .hero-content {
-        grid-template-columns: 1fr;
-      }
-
-      .journey-step {
-        grid-template-columns: 1fr;
-      }
-
-      .step-number {
-        width: 60px;
-        height: 60px;
-      }
-
-      .nav-links {
-        display: none;
-      }
-    }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-  
-
-  &lt;section class=&quot;hero&quot;&gt;
-    &lt;div class=&quot;container hero-content&quot;&gt;
-      &lt;div&gt;
-        &lt;div class=&quot;badge&quot;&gt;🚕 Product Case Study • Rapido Wanderlust&lt;/div&gt;
-        &lt;h1&gt;Designing a &lt;span class=&quot;highlight&quot;&gt;Tourism-Led&lt;/span&gt; Ride Experience&lt;/h1&gt;
-        &lt;p&gt;
-          A product strategy case study exploring how Rapido can increase user engagement,
-          ride frequency, and retention by helping users discover tourist attractions directly inside the app.
-        &lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;div class=&quot;hero-card&quot;&gt;
-        &lt;h2 style=&quot;font-size: 2rem; margin-bottom: 14px;&quot;&gt;Key Business Impact&lt;/h2&gt;
-        &lt;p style=&quot;color: var(--muted);&quot;&gt;
-          The Wanderlust feature transforms Rapido from a pure ride-booking platform into a city exploration companion.
-        &lt;/p&gt;
-
-        &lt;div class=&quot;stats-grid&quot;&gt;
-          &lt;div class=&quot;stat-box&quot;&gt;
-            &lt;h3&gt;31.8M&lt;/h3&gt;
-            &lt;p&gt;Monthly Active Users&lt;/p&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&quot;stat-box&quot;&gt;
-            &lt;h3&gt;1.5M&lt;/h3&gt;
-            &lt;p&gt;Ride Partners&lt;/p&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&quot;stat-box&quot;&gt;
-            &lt;h3&gt;120M&lt;/h3&gt;
-            &lt;p&gt;Total Installs&lt;/p&gt;
-          &lt;/div&gt;
-
-          &lt;div class=&quot;stat-box&quot;&gt;
-            &lt;h3&gt;250M+&lt;/h3&gt;
-            &lt;p&gt;Total Distance Covered&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-
-  &lt;section id=&quot;overview&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;div class=&quot;section-header&quot;&gt;
-        &lt;div class=&quot;section-label&quot;&gt;Overview&lt;/div&gt;
-        &lt;h2 class=&quot;section-title&quot;&gt;Understanding Rapido&lt;/h2&gt;
-        &lt;p class=&quot;section-description&quot;&gt;
-          Rapido is India’s leading bike taxi platform focused on affordable urban mobility and last-mile connectivity.
-          The company has expanded into autos, logistics, and delivery while competing with Ola and Uber.
-        &lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;div class=&quot;overview-grid&quot;&gt;
-        &lt;div class=&quot;card&quot;&gt;
-          &lt;h3&gt;🎯 Vision&lt;/h3&gt;
-          &lt;p&gt;
-            Revolutionize urban transportation through affordability, convenience,
-            and environmental sustainability.
-          &lt;/p&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;card&quot;&gt;
-          &lt;h3&gt;📈 Market Opportunity&lt;/h3&gt;
-          &lt;p&gt;
-            India’s ride-hailing market is projected to grow from $23.4B in 2025 to $44.18B by 2030.
-          &lt;/p&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;card&quot;&gt;
-          &lt;h3&gt;🏆 Competitive Position&lt;/h3&gt;
-          &lt;p&gt;
-            Rapido leads the bike taxi market with 56% market share, ahead of Ola and Uber.
-          &lt;/p&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;card&quot;&gt;
-          &lt;h3&gt;🚀 Product Goal&lt;/h3&gt;
-          &lt;p&gt;
-            Increase engagement and ride frequency with a differentiated in-app experience.
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-
-  &lt;section id=&quot;problem&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;div class=&quot;section-header&quot;&gt;
-        &lt;div class=&quot;section-label&quot;&gt;Problem Statement&lt;/div&gt;
-        &lt;h2 class=&quot;section-title&quot;&gt;The Challenge&lt;/h2&gt;
-      &lt;/div&gt;
-
-      &lt;div class=&quot;problem-box&quot;&gt;
-        &lt;h2&gt;
-          How might Rapido increase user engagement and ride frequency through an innovative feature experience?
-        &lt;/h2&gt;
-
-        &lt;p&gt;
-          As a Product Manager at Rapido, the objective is to create a high-impact feature that drives user retention,
-          improves booking conversions, and differentiates the platform beyond transportation.
-          The MVP timeline is 3 months with a focus on measurable engagement growth.
-        &lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-
-  &lt;section id=&quot;personas&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;div class=&quot;section-header&quot;&gt;
-        &lt;div class=&quot;section-label&quot;&gt;User Research&lt;/div&gt;
-        &lt;h2 class=&quot;section-title&quot;&gt;Target Personas&lt;/h2&gt;
-        &lt;p class=&quot;section-description&quot;&gt;
-          Three distinct user groups were identified to understand different mobility behaviors and pain points.
-        &lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;div class=&quot;persona-grid&quot;&gt;
-        &lt;div class=&quot;persona-card&quot;&gt;
-          &lt;div class=&quot;persona-header&quot;&gt;Priya Gupta • The Explorer&lt;/div&gt;
-          &lt;div class=&quot;persona-content&quot;&gt;
-            &lt;p&gt;&lt;strong&gt;Age:&lt;/strong&gt; 23 • Delhi&lt;/p&gt;
-            &lt;p&gt;&lt;strong&gt;Occupation:&lt;/strong&gt; Literature Student&lt;/p&gt;
-
-            &lt;h4&gt;Goals &amp; Needs&lt;/h4&gt;
-            &lt;ul&gt;
-              &lt;li&gt;Reliable transportation for city exploration&lt;/li&gt;
-              &lt;li&gt;Transparent pricing&lt;/li&gt;
-              &lt;li&gt;Flexible booking options&lt;/li&gt;
-            &lt;/ul&gt;
-
-            &lt;h4&gt;Pain Points&lt;/h4&gt;
-            &lt;ul&gt;
-              &lt;li&gt;Surge pricing during peak hours&lt;/li&gt;
-              &lt;li&gt;Limited ride availability&lt;/li&gt;
-              &lt;li&gt;Safety concerns while traveling alone&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;persona-card&quot;&gt;
-          &lt;div class=&quot;persona-header&quot;&gt;Shivam Bansal • Working Professional&lt;/div&gt;
-          &lt;div class=&quot;persona-content&quot;&gt;
-            &lt;p&gt;&lt;strong&gt;Age:&lt;/strong&gt; 25 • Bengaluru&lt;/p&gt;
-            &lt;p&gt;&lt;strong&gt;Occupation:&lt;/strong&gt; Software Developer&lt;/p&gt;
-
-            &lt;h4&gt;Goals &amp; Needs&lt;/h4&gt;
-            &lt;ul&gt;
-              &lt;li&gt;Affordable daily commutes&lt;/li&gt;
-              &lt;li&gt;Reliable late-night rides&lt;/li&gt;
-              &lt;li&gt;Multiple payment methods&lt;/li&gt;
-            &lt;/ul&gt;
-
-            &lt;h4&gt;Pain Points&lt;/h4&gt;
-            &lt;ul&gt;
-              &lt;li&gt;Language barriers with drivers&lt;/li&gt;
-              &lt;li&gt;Hidden charges &amp; toll confusion&lt;/li&gt;
-              &lt;li&gt;Ride unavailability in remote areas&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;persona-card&quot;&gt;
-          &lt;div class=&quot;persona-header&quot;&gt;Rajesh Kapoor • Busy Commuter&lt;/div&gt;
-          &lt;div class=&quot;persona-content&quot;&gt;
-            &lt;p&gt;&lt;strong&gt;Age:&lt;/strong&gt; 32 • Mumbai&lt;/p&gt;
-            &lt;p&gt;&lt;strong&gt;Occupation:&lt;/strong&gt; Small Business Owner&lt;/p&gt;
-
-            &lt;h4&gt;Goals &amp; Needs&lt;/h4&gt;
-            &lt;ul&gt;
-              &lt;li&gt;Fast and reliable commuting&lt;/li&gt;
-              &lt;li&gt;Comfort during peak hours&lt;/li&gt;
-              &lt;li&gt;Efficient daily transportation&lt;/li&gt;
-            &lt;/ul&gt;
-
-            &lt;h4&gt;Pain Points&lt;/h4&gt;
-            &lt;ul&gt;
-              &lt;li&gt;High surge pricing&lt;/li&gt;
-              &lt;li&gt;Long wait times&lt;/li&gt;
-              &lt;li&gt;Traffic-related delays&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-
-  &lt;section&gt;
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;div class=&quot;section-header&quot;&gt;
-        &lt;div class=&quot;section-label&quot;&gt;Prioritization&lt;/div&gt;
-        &lt;h2 class=&quot;section-title&quot;&gt;Pain Points Analysis&lt;/h2&gt;
-        &lt;p class=&quot;section-description&quot;&gt;
-          Pain points were prioritized using impact and reach scoring to identify the highest-value opportunities.
-        &lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;div class=&quot;table-wrapper&quot;&gt;
-        &lt;table&gt;
-          &lt;thead&gt;
-            &lt;tr&gt;
-              &lt;th&gt;Pain Point&lt;/th&gt;
-              &lt;th&gt;Impact&lt;/th&gt;
-              &lt;th&gt;Reach&lt;/th&gt;
-              &lt;th&gt;Priority Score&lt;/th&gt;
-            &lt;/tr&gt;
-          &lt;/thead&gt;
-          &lt;tbody&gt;
-            &lt;tr&gt;
-              &lt;td&gt;Unclear pricing and extra charges&lt;/td&gt;
-              &lt;td&gt;90&lt;/td&gt;
-              &lt;td&gt;90&lt;/td&gt;
-              &lt;td&gt;8,100&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-              &lt;td&gt;Long wait times and ride cancellations&lt;/td&gt;
-              &lt;td&gt;90&lt;/td&gt;
-              &lt;td&gt;90&lt;/td&gt;
-              &lt;td&gt;8,100&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-              &lt;td&gt;Lack of local attraction discovery&lt;/td&gt;
-              &lt;td&gt;95&lt;/td&gt;
-              &lt;td&gt;85&lt;/td&gt;
-              &lt;td&gt;8,075&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-              &lt;td&gt;Safety concerns during solo travel&lt;/td&gt;
-              &lt;td&gt;95&lt;/td&gt;
-              &lt;td&gt;85&lt;/td&gt;
-              &lt;td&gt;8,075&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-              &lt;td&gt;Language barriers with drivers&lt;/td&gt;
-              &lt;td&gt;85&lt;/td&gt;
-              &lt;td&gt;80&lt;/td&gt;
-              &lt;td&gt;6,800&lt;/td&gt;
-            &lt;/tr&gt;
-          &lt;/tbody&gt;
-        &lt;/table&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-
-  &lt;section id=&quot;features&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;div class=&quot;section-header&quot;&gt;
-        &lt;div class=&quot;section-label&quot;&gt;Solution&lt;/div&gt;
-        &lt;h2 class=&quot;section-title&quot;&gt;Introducing Wanderlust&lt;/h2&gt;
-        &lt;p class=&quot;section-description&quot;&gt;
-          A location-based exploration experience embedded directly inside the Rapido app.
-        &lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;div class=&quot;feature-grid&quot;&gt;
-        &lt;div class=&quot;feature-box&quot;&gt;
-          &lt;span&gt;📍&lt;/span&gt;
-          &lt;h3&gt;Tourist Recommendations&lt;/h3&gt;
-          &lt;p&gt;
-            Curated local attractions displayed directly on the dashboard based on city context.
-          &lt;/p&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;feature-box&quot;&gt;
-          &lt;span&gt;💰&lt;/span&gt;
-          &lt;h3&gt;Fare &amp; Distance Estimation&lt;/h3&gt;
-          &lt;p&gt;
-            Transparent travel costs and estimated trip duration before booking.
-          &lt;/p&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;feature-box&quot;&gt;
-          &lt;span&gt;🚕&lt;/span&gt;
-          &lt;h3&gt;One-Tap Ride Booking&lt;/h3&gt;
-          &lt;p&gt;
-            Seamless ride booking directly from attraction discovery cards.
-          &lt;/p&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;feature-box&quot;&gt;
-          &lt;span&gt;🛡️&lt;/span&gt;
-          &lt;h3&gt;Safety &amp; Live Tracking&lt;/h3&gt;
-          &lt;p&gt;
-            Real-time location sharing and live trip monitoring for user safety.
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-
-  &lt;section id=&quot;journey&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;div class=&quot;section-header&quot;&gt;
-        &lt;div class=&quot;section-label&quot;&gt;User Flow&lt;/div&gt;
-        &lt;h2 class=&quot;section-title&quot;&gt;The Wanderlust Experience&lt;/h2&gt;
-      &lt;/div&gt;
-
-      &lt;div class=&quot;journey&quot;&gt;
-        &lt;div class=&quot;journey-step&quot;&gt;
-          &lt;div class=&quot;step-number&quot;&gt;1&lt;/div&gt;
-          &lt;div class=&quot;step-card&quot;&gt;
-            &lt;h3&gt;Discovery Through Dashboard Banner&lt;/h3&gt;
-            &lt;p&gt;
-              Users opening the Rapido app see a dynamic Wanderlust banner showcasing iconic tourist attractions.
-              The auto-scrolling visual design increases engagement and sparks exploration curiosity.
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;journey-step&quot;&gt;
-          &lt;div class=&quot;step-number&quot;&gt;2&lt;/div&gt;
-          &lt;div class=&quot;step-card&quot;&gt;
-            &lt;h3&gt;Explore Attractions&lt;/h3&gt;
-            &lt;p&gt;
-              Users browse categorized attraction cards with filters for distance, categories,
-              estimated fare, and travel time.
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;journey-step&quot;&gt;
-          &lt;div class=&quot;step-number&quot;&gt;3&lt;/div&gt;
-          &lt;div class=&quot;step-card&quot;&gt;
-            &lt;h3&gt;Ride Booking Flow&lt;/h3&gt;
-            &lt;p&gt;
-              Selecting a destination transitions the user directly into Rapido’s booking flow,
-              allowing them to compare routes, fares, and vehicle types before confirming.
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;journey-step&quot;&gt;
-          &lt;div class=&quot;step-number&quot;&gt;4&lt;/div&gt;
-          &lt;div class=&quot;step-card&quot;&gt;
-            &lt;h3&gt;Post-Ride Engagement&lt;/h3&gt;
-            &lt;p&gt;
-              Users provide ride feedback and receive personalized recommendations,
-              encouraging repeat usage and higher retention.
-            &lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-
-  &lt;section id=&quot;metrics&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;div class=&quot;section-header&quot;&gt;
-        &lt;div class=&quot;section-label&quot;&gt;Success Metrics&lt;/div&gt;
-        &lt;h2 class=&quot;section-title&quot;&gt;Measuring Product Impact&lt;/h2&gt;
-      &lt;/div&gt;
-
-      &lt;div class=&quot;metrics-grid&quot;&gt;
-        &lt;div class=&quot;metric-card&quot;&gt;
-          &lt;h3&gt;User Engagement&lt;/h3&gt;
-          &lt;ul&gt;
-            &lt;li&gt;Feature adoption rate&lt;/li&gt;
-            &lt;li&gt;Repeat usage rate&lt;/li&gt;
-            &lt;li&gt;Banner interaction rate&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;metric-card&quot;&gt;
-          &lt;h3&gt;Business Metrics&lt;/h3&gt;
-          &lt;ul&gt;
-            &lt;li&gt;Ride booking conversion rate&lt;/li&gt;
-            &lt;li&gt;Revenue growth from Wanderlust&lt;/li&gt;
-            &lt;li&gt;Cost per booking&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;metric-card&quot;&gt;
-          &lt;h3&gt;User Satisfaction&lt;/h3&gt;
-          &lt;ul&gt;
-            &lt;li&gt;Ride satisfaction score&lt;/li&gt;
-            &lt;li&gt;Feature ratings&lt;/li&gt;
-            &lt;li&gt;Retention improvements&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;metric-card&quot;&gt;
-          &lt;h3&gt;North Star Metric&lt;/h3&gt;
-          &lt;ul&gt;
-            &lt;li&gt;Percentage of users booking rides after exploring attractions&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-
-  &lt;section id=&quot;strategy&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;div class=&quot;section-header&quot;&gt;
-        &lt;div class=&quot;section-label&quot;&gt;Go-To-Market&lt;/div&gt;
-        &lt;h2 class=&quot;section-title&quot;&gt;Launch Strategy&lt;/h2&gt;
-      &lt;/div&gt;
-
-      &lt;div class=&quot;timeline&quot;&gt;
-        &lt;div class=&quot;timeline-item&quot;&gt;
-          &lt;div class=&quot;timeline-dot&quot;&gt;&lt;/div&gt;
-          &lt;div class=&quot;timeline-card&quot;&gt;
-            &lt;h3&gt;Pre-Launch • Month 1&lt;/h3&gt;
-            &lt;ul&gt;
-              &lt;li&gt;In-app teaser campaigns&lt;/li&gt;
-              &lt;li&gt;Driver onboarding &amp; training&lt;/li&gt;
-              &lt;li&gt;Tourist content curation&lt;/li&gt;
-              &lt;li&gt;Location-based recommendation setup&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;timeline-item&quot;&gt;
-          &lt;div class=&quot;timeline-dot&quot;&gt;&lt;/div&gt;
-          &lt;div class=&quot;timeline-card&quot;&gt;
-            &lt;h3&gt;Launch • Month 3&lt;/h3&gt;
-            &lt;ul&gt;
-              &lt;li&gt;Dashboard integration of Wanderlust widget&lt;/li&gt;
-              &lt;li&gt;Influencer partnerships with travel creators&lt;/li&gt;
-              &lt;li&gt;Performance marketing campaigns&lt;/li&gt;
-              &lt;li&gt;Referral discounts for city exploration rides&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;timeline-item&quot;&gt;
-          &lt;div class=&quot;timeline-dot&quot;&gt;&lt;/div&gt;
-          &lt;div class=&quot;timeline-card&quot;&gt;
-            &lt;h3&gt;Post Launch • Month 3+&lt;/h3&gt;
-            &lt;ul&gt;
-              &lt;li&gt;Gamified loyalty badges&lt;/li&gt;
-              &lt;li&gt;Personalized recommendations&lt;/li&gt;
-              &lt;li&gt;Expansion to high-performing cities&lt;/li&gt;
-              &lt;li&gt;Multi-stop itinerary booking&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-
-  &lt;section&gt;
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;div class=&quot;section-header&quot;&gt;
-        &lt;div class=&quot;section-label&quot;&gt;Risks &amp; Challenges&lt;/div&gt;
-        &lt;h2 class=&quot;section-title&quot;&gt;Potential Pitfalls&lt;/h2&gt;
-      &lt;/div&gt;
-
-      &lt;div class=&quot;overview-grid&quot;&gt;
-        &lt;div class=&quot;card&quot;&gt;
-          &lt;h3&gt;⚠️ Third-Party Dependency&lt;/h3&gt;
-          &lt;p&gt;
-            Heavy reliance on APIs like Google Places can create vendor lock-in risks.
-          &lt;/p&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;card&quot;&gt;
-          &lt;h3&gt;📉 Engagement Drop&lt;/h3&gt;
-          &lt;p&gt;
-            Poor recommendation quality could reduce user trust and adoption.
-          &lt;/p&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;card&quot;&gt;
-          &lt;h3&gt;📍 Data Inaccuracy&lt;/h3&gt;
-          &lt;p&gt;
-            Tourist information may become outdated or incorrectly categorized.
-          &lt;/p&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;card&quot;&gt;
-          &lt;h3&gt;🎯 Personalization Bias&lt;/h3&gt;
-          &lt;p&gt;
-            Overfitting recommendations could create repetitive or irrelevant suggestions.
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-
-  &lt;footer&gt;
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;h2&gt;Thank You&lt;/h2&gt;
-      &lt;p&gt;
-        Designed &amp; Presented by Vinay B Rao • Product Management Case Study
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/footer&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-"
-    title="Rapido Wanderlust Case Study"
-    style="
-      width:100%;
-      height:100vh;
-      border:none;
-      background:#0f1115;
-      display:block;
-    "
-    loading="lazy">
-  </iframe>
-</div>
-
+<div id="cs-rapido" class="cs-detail" style="background:#0b0c0e;">
+  <button class="cs-back" aria-label="Back to Case Studies">← Back to Case Studies</button>
+  <div class="rp">
+    <!-- Hero -->
+    <div class="rp-hero">
+      <div class="rp-hero-inner">
+        <div>
+          <div class="rp-badge">Product Growth & Engagement · Mobility</div>
+          <h1 class="rp-h1">Rapido<span class="rp-g"> Wanderlust</span></h1>
+          <p class="rp-p">A product growth case study exploring how Rapido can increase ride frequency by transforming from a pure transportation utility into a city discovery companion — creating new demand, not just serving existing demand.</p>
+          <div class="rp-stats">
+            <div class="rp-stat"><div class="rp-stat-num">1</div><div class="rp-stat-label">India's leading bike-taxi platform</div></div>
+            <div class="rp-stat"><div class="rp-stat-num">Low</div><div class="rp-stat-label">User switching costs vs. Ola & Uber</div></div>
+            <div class="rp-stat"><div class="rp-stat-num">3mo</div><div class="rp-stat-label">Discovery-to-MVP timeline</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="rp-hero-card">
+            <div class="rp-card-block"><div class="rp-card-label">The Problem</div><div class="rp-card-text">Most users open Rapido only when they already know where to go. The app acts as a transportation utility rather than a discovery platform, limiting engagement and creating heavy dependence on discounts to drive rides.</div></div>
+            <div class="rp-goal-block"><div class="rp-card-label">Goal</div><div class="rp-card-text">Can Rapido create ride demand instead of only serving existing demand — without relying on discounts and promotions?</div></div>
+            <div class="rp-mini-grid">
+              <div class="rp-mini"><div class="rp-mini-num">4</div><div class="rp-mini-label">MVP features</div></div>
+              <div class="rp-mini"><div class="rp-mini-num">3</div><div class="rp-mini-label">Growth phases</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overview -->
+    <div class="rp-section">
+      <div class="rp-eyebrow">Project Overview</div>
+      <div class="rp-sec-h2">From transportation utility to city exploration companion.</div>
+      <div class="rp-cards">
+        <div class="rp-overview-card"><div class="rp-oc-num">01</div><div class="rp-oc-title">Business Context</div><div class="rp-oc-desc">Rapido operates across Bike Taxi, Auto, Cab, and Delivery and competes directly with Ola and Uber in a market where user loyalty is low and switching costs are minimal.</div><ul class="rp-oc-list"><li>Acquisition growing but ride frequency plateauing</li><li>High dependence on promotions to drive bookings</li><li>Limited reasons for users to open the app between rides</li></ul></div>
+        <div class="rp-overview-card"><div class="rp-oc-num">02</div><div class="rp-oc-title">Research Approach</div><div class="rp-oc-desc">I explored user personas, travel behaviors, city exploration habits, ride booking journeys, and mobility pain points to surface unmet needs beyond standard commuting.</div><ul class="rp-oc-list"><li>Persona analysis across 3 key user types</li><li>Discovery behavior patterns among new city residents</li><li>Opportunity sizing for intent-driven ride creation</li></ul></div>
+        <div class="rp-overview-card"><div class="rp-oc-num">03</div><div class="rp-oc-title">The Opportunity</div><div class="rp-oc-desc">Users don't always begin with transportation — they begin with intent. "I want to explore Bangalore." "I have a free evening." Transportation is simply the bridge between intent and destination.</div><ul class="rp-oc-list"><li>New city residents & students unfamiliar with local attractions</li><li>Tourists with no discovery layer in ride-hailing apps</li><li>Young professionals with discretionary free time</li></ul></div>
+      </div>
+    </div>
+
+    <!-- Personas -->
+    <div class="rp-bg2">
+      <div class="rp-section">
+        <div class="rp-eyebrow">User Personas</div>
+        <div class="rp-sec-h2">Three users. Three unmet needs beyond the ride.</div>
+        <div class="rp-sec-sub">Persona analysis revealed a consistent pattern — many users lacked local discovery, not transportation access.</div>
+        <div class="rp-personas">
+          <div class="rp-persona">
+            <div class="rp-persona-avatar">P</div>
+            <div class="rp-persona-name">Priya, 23</div>
+            <div class="rp-persona-role">The Explorer · Student</div>
+            <hr class="rp-persona-divider"/>
+            <div class="rp-persona-goals-label">Needs</div>
+            <div class="rp-persona-need">Affordable travel, safety, and recommendations for places to visit in the city.</div>
+            <div class="rp-persona-pain">⚡ Pain: Doesn't know what places to visit, worries about safety, gets hit by surge pricing.</div>
+          </div>
+          <div class="rp-persona">
+            <div class="rp-persona-avatar">S</div>
+            <div class="rp-persona-name">Shivam, 25</div>
+            <div class="rp-persona-role">The Working Professional · Engineer</div>
+            <hr class="rp-persona-divider"/>
+            <div class="rp-persona-goals-label">Needs</div>
+            <div class="rp-persona-need">Local discovery, convenience, and reliable transportation after relocating to a new city.</div>
+            <div class="rp-persona-pain">⚡ Pain: Unfamiliar with the city, faces language barriers, and worries about hidden costs.</div>
+          </div>
+          <div class="rp-persona">
+            <div class="rp-persona-avatar">R</div>
+            <div class="rp-persona-name">Rajesh, 32</div>
+            <div class="rp-persona-role">The Busy Commuter · Small Business Owner</div>
+            <hr class="rp-persona-divider"/>
+            <div class="rp-persona-goals-label">Needs</div>
+            <div class="rp-persona-need">Fast transport, predictable pricing, and minimal wait times for frequent city travel.</div>
+            <div class="rp-persona-pain">⚡ Pain: Ride cancellations, long wait times, and traffic delays reduce trust and frequency.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Insight -->
+    <div class="rp-section">
+      <div class="rp-eyebrow">Key Insight</div>
+      <div class="rp-sec-h2">Intent comes before transportation.</div>
+      <div class="rp-insights">
+        <div class="rp-insight"><div class="rp-insight-num">01</div><div class="rp-insight-text">Users don't begin with transportation. They begin with intent — <strong>"I want to explore Bangalore"</strong> or <strong>"I have a free evening."</strong> Rapido can intercept that intent.</div></div>
+        <div class="rp-insight"><div class="rp-insight-num">02</div><div class="rp-insight-text">New city residents, tourists, and students <strong>struggle with local discovery</strong> — they don't know what to visit, how far it is, or how much the ride will cost.</div></div>
+        <div class="rp-insight"><div class="rp-insight-num">03</div><div class="rp-insight-text">Competitors focus entirely on rides. <strong>No ride-hailing platform</strong> has built a discovery layer that creates ride demand — this is an open, defensible differentiation opportunity.</div></div>
+        <div class="rp-insight"><div class="rp-insight-num">04</div><div class="rp-insight-text"><strong>Fare transparency at the discovery stage</strong> — showing distance, ride time, and estimated cost before booking — dramatically reduces booking friction for exploratory trips.</div></div>
+      </div>
+    </div>
+
+    <!-- Solution -->
+    <div class="rp-bg2">
+      <div class="rp-section">
+        <div class="rp-eyebrow">Proposed Solution</div>
+        <div class="rp-sec-h2">Wanderlust — "Where every ride becomes an adventure."</div>
+        <div class="rp-sec-sub">A destination discovery experience built directly into Rapido. Instead of simply booking rides, users can discover places worth visiting nearby — then book instantly from the attraction card.</div>
+        <div class="rp-solutions">
+          <div class="rp-sol">
+            <div><div class="rp-sol-badge">Flagship · Feature 01</div><div class="rp-sol-title">Destination Recommendations</div><div class="rp-sol-sub">Proactive discovery within the Rapido home screen</div><div class="rp-sol-desc">A personalized "Wanderlust" section surfaces popular attractions and hidden gems based on the user's current location, city, interests, and seasonal trends. Each destination card includes photos, distance, visiting hours, and estimated fare — giving users everything they need to decide before booking.</div><div class="rp-sol-impact-row"><span class="rp-sol-impact-label">Why it works:</span><span class="rp-sol-impact-val">Creates new ride demand · Increases app open rate · Gives users a reason to browse beyond commuting needs</span></div></div>
+            <div class="rp-sol-rice"><div class="rp-sol-rice-label">RICE Score</div><div class="rp-sol-rice-num">High</div><div class="rp-sol-rice-breakdown"><div class="rp-rice-row"><span>Reach</span><span class="rp-rice-val">Very High</span></div><div class="rp-rice-row"><span>Impact</span><span class="rp-rice-val">High</span></div><div class="rp-rice-row"><span>Confidence</span><span class="rp-rice-val">Medium</span></div><div class="rp-rice-row"><span>Effort</span><span class="rp-rice-val">Low</span></div></div></div>
+          </div>
+          <div class="rp-sol">
+            <div><div class="rp-sol-badge">Feature 02</div><div class="rp-sol-title">Fare Transparency at Discovery</div><div class="rp-sol-sub">Remove booking hesitation before the ride decision</div><div class="rp-sol-desc">Show distance, ride duration, and estimated fare directly on each destination card — before the user even taps "Book." This eliminates the friction of discovering cost only at the payment screen, which is the primary drop-off point for exploratory trips.</div><div class="rp-sol-impact-row"><span class="rp-sol-impact-label">Impact:</span><span class="rp-sol-impact-val">Reduces abandonment · Builds trust · Improves booking conversion from discovery to checkout</span></div></div>
+            <div class="rp-sol-rice"><div class="rp-sol-rice-label">RICE Score</div><div class="rp-sol-rice-num">High</div><div class="rp-sol-rice-breakdown"><div class="rp-rice-row"><span>Reach</span><span class="rp-rice-val">High</span></div><div class="rp-rice-row"><span>Impact</span><span class="rp-rice-val">High</span></div><div class="rp-rice-row"><span>Confidence</span><span class="rp-rice-val">High</span></div><div class="rp-rice-row"><span>Effort</span><span class="rp-rice-val">Very Low</span></div></div></div>
+          </div>
+          <div class="rp-sol">
+            <div><div class="rp-sol-badge">Feature 03</div><div class="rp-sol-title">One-Tap Ride Booking</div><div class="rp-sol-sub">Seamless conversion from discovery to ride</div><div class="rp-sol-desc">Users can book a ride directly from the attraction card with a single tap — destination pre-filled, fare estimated, and route confirmed. This zero-friction booking path is the critical conversion moment that turns exploration intent into a booked ride.</div><div class="rp-sol-impact-row"><span class="rp-sol-impact-label">Impact:</span><span class="rp-sol-impact-val">Higher booking conversion · Shorter booking funnel · More incremental rides per session</span></div></div>
+            <div class="rp-sol-rice"><div class="rp-sol-rice-label">RICE Score</div><div class="rp-sol-rice-num">High</div><div class="rp-sol-rice-breakdown"><div class="rp-rice-row"><span>Reach</span><span class="rp-rice-val">High</span></div><div class="rp-rice-row"><span>Impact</span><span class="rp-rice-val">High</span></div><div class="rp-rice-row"><span>Confidence</span><span class="rp-rice-val">High</span></div><div class="rp-rice-row"><span>Effort</span><span class="rp-rice-val">Low</span></div></div></div>
+          </div>
+          <div class="rp-sol">
+            <div><div class="rp-sol-badge">Feature 04</div><div class="rp-sol-title">Safety Layer & Post-Trip Feedback</div><div class="rp-sol-sub">Trust-building for exploratory trips to unfamiliar places</div><div class="rp-sol-desc">Live ride tracking, location sharing with contacts, and emergency support are surfaced more prominently for Wanderlust rides — since users are traveling to unfamiliar destinations. Post-trip satisfaction feedback feeds the recommendation algorithm to improve future discovery quality.</div><div class="rp-sol-impact-row"><span class="rp-sol-impact-label">Impact:</span><span class="rp-sol-impact-val">Increases trust for new-to-city users · Improves recommendation quality over time · Reduces safety-related drop-off</span></div></div>
+            <div class="rp-sol-rice"><div class="rp-sol-rice-label">RICE Score</div><div class="rp-sol-rice-num">Med</div><div class="rp-sol-rice-breakdown"><div class="rp-rice-row"><span>Reach</span><span class="rp-rice-val">Medium</span></div><div class="rp-rice-row"><span>Impact</span><span class="rp-rice-val">High</span></div><div class="rp-rice-row"><span>Confidence</span><span class="rp-rice-val">High</span></div><div class="rp-rice-row"><span>Effort</span><span class="rp-rice-val">Low</span></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Metrics -->
+    <div class="rp-section">
+      <div class="rp-eyebrow">Success Metrics</div>
+      <div class="rp-sec-h2">A four-layer measurement framework.</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-top:40px">
+        <div>
+          <div class="rp-north-star">
+            <div class="rp-ns-label">North Star Metric</div>
+            <div class="rp-ns-title">Booking Conversion Rate</div>
+            <div class="rp-ns-desc">Percentage of users who book a ride after interacting with the Wanderlust discovery feature.</div>
+            <div class="rp-ns-loop">
+              <span class="rp-ns-step">Discover</span>
+              <span class="rp-ns-arrow">→</span>
+              <span class="rp-ns-step">Explore</span>
+              <span class="rp-ns-arrow">→</span>
+              <span class="rp-ns-step">Book</span>
+              <span class="rp-ns-arrow">→</span>
+              <span class="rp-ns-step rp-ns-active">Return</span>
+            </div>
+          </div>
+        </div>
+        <div class="rp-metric-groups">
+          <div class="rp-metric-group">
+            <div class="rp-metric-group-label">Engagement Metrics</div>
+            <div class="rp-metric-pills"><span class="rp-metric-pill">Feature Adoption Rate</span><span class="rp-metric-pill">Click-Through Rate</span><span class="rp-metric-pill">Repeat Feature Usage</span><span class="rp-metric-pill">Time Spent Exploring</span></div>
+          </div>
+          <div class="rp-metric-group">
+            <div class="rp-metric-group-label">Growth Metrics</div>
+            <div class="rp-metric-pills"><span class="rp-metric-pill">Incremental Ride Bookings</span><span class="rp-metric-pill">Ride Frequency Per User</span><span class="rp-metric-pill">Monthly Active Users</span><span class="rp-metric-pill">Retention Rate</span></div>
+          </div>
+          <div class="rp-metric-group">
+            <div class="rp-metric-group-label">Revenue & UX Metrics</div>
+            <div class="rp-metric-pills"><span class="rp-metric-pill">Revenue Per User</span><span class="rp-metric-pill">Incremental Revenue</span><span class="rp-metric-pill">Feature Rating</span><span class="rp-metric-pill">Ride NPS</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Risks -->
+    <div class="rp-bg2">
+      <div class="rp-section">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start">
+          <div>
+            <div class="rp-eyebrow">Risks & Mitigations</div>
+            <div class="rp-sec-h2">Four risks — four clear answers.</div>
+            <div class="rp-risks">
+              <div class="rp-risk-row"><div class="rp-risk-name">Poor Recommendations</div><div class="rp-risk-fix">Location-based personalization + post-trip feedback loop</div></div>
+              <div class="rp-risk-row"><div class="rp-risk-name">Outdated Attraction Data</div><div class="rp-risk-fix">Partner with reliable location data providers</div></div>
+              <div class="rp-risk-row"><div class="rp-risk-name">Low Booking Conversion</div><div class="rp-risk-fix">Fare transparency + time estimate at discovery stage</div></div>
+              <div class="rp-risk-row"><div class="rp-risk-name">Discovery Fatigue</div><div class="rp-risk-fix">Rotate seasonal and trending attractions regularly</div></div>
+            </div>
+          </div>
+          <div>
+            <div class="rp-eyebrow">Future Roadmap</div>
+            <div class="rp-sec-h2">Three phases of growth.</div>
+            <div class="rp-future-phases">
+              <div class="rp-phase"><div class="rp-phase-badge">Phase 2</div><div class="rp-phase-title">Intelligence Layer</div><div class="rp-phase-items"><span>AI-powered recommendations</span><span>Personalized city guides</span><span>Weekend itinerary builder</span></div></div>
+              <div class="rp-phase"><div class="rp-phase-badge">Phase 3</div><div class="rp-phase-title">Social & Group</div><div class="rp-phase-items"><span>Multi-stop ride planning</span><span>Group trip coordination</span><span>Social sharing of discoveries</span></div></div>
+              <div class="rp-phase"><div class="rp-phase-badge">Phase 4</div><div class="rp-phase-title">Platform Expansion</div><div class="rp-phase-items"><span>Local experiences marketplace</span><span>Event recommendations</span><span>Partner promotions & deals</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Roadmap -->
+    <div class="rp-section">
+      <div class="rp-eyebrow">3-Month Roadmap</div>
+      <div class="rp-sec-h2">From research to validated MVP.</div>
+      <div class="rp-roadmap">
+        <div class="rp-roadmap-card"><div class="rp-roadmap-month">Month 1</div><div class="rp-roadmap-phase">Research & Design</div><ul class="rp-roadmap-list"><li>Validate persona insights with user interviews</li><li>Define MVP feature scope</li><li>Design Wanderlust UX and destination card</li><li>Identify location data partners</li></ul></div>
+        <div class="rp-roadmap-card"><div class="rp-roadmap-month">Month 2</div><div class="rp-roadmap-phase">MVP Development</div><ul class="rp-roadmap-list"><li>Build Wanderlust home section</li><li>Integrate attraction data API</li><li>Implement fare transparency on cards</li><li>One-tap booking from discovery card</li></ul></div>
+        <div class="rp-roadmap-card"><div class="rp-roadmap-month">Month 3</div><div class="rp-roadmap-phase">Beta & Measurement</div><ul class="rp-roadmap-list"><li>Beta rollout in 2 cities</li><li>Measure booking conversion rate</li><li>Collect post-trip feedback</li><li>Iterate on recommendation quality</li></ul></div>
+      </div>
+    </div>
+
+    <!-- Takeaways -->
+    <div class="rp-bg2">
+      <div class="rp-section">
+        <div class="rp-eyebrow">Key Takeaways</div>
+        <div class="rp-sec-h2">Four principles that guided the strategy.</div>
+        <div class="rp-takeaways">
+          <div class="rp-takeaway"><div class="rp-takeaway-icon">🎯</div><div class="rp-takeaway-title">Solve Intent, Not Just Transactions</div><div class="rp-takeaway-desc">Users care about experiences. Transportation is simply the enabler. Rapido can create demand by meeting users at their intent, not just at their destination.</div></div>
+          <div class="rp-takeaway"><div class="rp-takeaway-icon">🚀</div><div class="rp-takeaway-title">Growth Comes from New Behaviors</div><div class="rp-takeaway-desc">The best growth opportunities come from creating entirely new reasons to use a product — not from optimizing an existing funnel.</div></div>
+          <div class="rp-takeaway"><div class="rp-takeaway-icon">🔍</div><div class="rp-takeaway-title">Discovery Drives Engagement</div><div class="rp-takeaway-desc">Helping users discover destinations creates booking opportunities that would never have existed. It turns passive users into active explorers.</div></div>
+          <div class="rp-takeaway"><div class="rp-takeaway-icon">💛</div><div class="rp-takeaway-title">Utility Products Can Become Habit Products</div><div class="rp-takeaway-desc">The strongest products become part of users' lifestyle, not just their workflow. Wanderlust moves Rapido from "when I need a ride" to "when I want to explore."</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="rp-footer">
+      <div class="rp-footer-inner">
+        <div><div class="rp-footer-title">Rapido<span class="rp-g"> Wanderlust</span></div><div class="rp-footer-desc">A product growth strategy case study exploring how contextual discovery can create new ride demand and transform a transportation utility into a city exploration companion.</div></div>
+        <div class="rp-footer-pills"><div class="rp-footer-pill">Product Strategy</div><div class="rp-footer-pill">Growth</div><div class="rp-footer-pill">Engagement</div><div class="rp-footer-pill">User Research</div></div>
+      </div>
+    </div>
+  </div>
 <!-- ═══ CASE STUDY DETAIL: WhatsApp SafeChat ═══ -->
 <div id="cs-wa" class="cs-detail">
   <button class="cs-back" aria-label="Back to Case Studies">← Back to Case Studies</button>
@@ -1485,6 +670,204 @@
       <div class="wa-footer-inner">
         <div><div class="wa-footer-title">WhatsApp <span class="g">SafeChat</span></div><div class="wa-footer-desc">A privacy-focused messaging experience designed for temporary and professional conversations.</div></div>
         <div class="wa-footer-pills"><div class="wa-footer-pill">Research</div><div class="wa-footer-pill">Product Strategy</div><div class="wa-footer-pill">UX Thinking</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CASE STUDY DETAIL: Coursera — Course Completion ═══ -->
+<div id="cs-coursera" class="cs-detail" style="background:#060d1f;">
+  <button class="cs-back" aria-label="Back to Case Studies">← Back to Case Studies</button>
+  <div class="crs">
+    <!-- Hero -->
+    <div class="crs-hero">
+      <div class="crs-hero-inner">
+        <div>
+          <div class="crs-badge">Product Strategy & Growth · EdTech</div>
+          <h1 class="crs-h1">Coursera<span class="crs-g"> Course Completion</span></h1>
+          <p class="crs-p">A product strategy case study exploring how Coursera can increase its 18% course completion rate by 30% — through habit formation, micro-milestones, personalized learning paths, and social accountability mechanisms.</p>
+          <div class="crs-stats">
+            <div class="crs-stat"><div class="crs-stat-num">18%</div><div class="crs-stat-label">Current completion rate (industry avg)</div></div>
+            <div class="crs-stat"><div class="crs-stat-num">30%</div><div class="crs-stat-label">Target improvement in 6 months</div></div>
+            <div class="crs-stat"><div class="crs-stat-num">148M</div><div class="crs-stat-label">Registered Coursera learners globally</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="crs-hero-card">
+            <div class="crs-card-block"><div class="crs-card-label">The Problem</div><div class="crs-card-text">Despite a strong course catalog and global reach, the vast majority of learners drop off before completing the courses they enroll in — hurting learner success, retention, and certification value.</div></div>
+            <div class="crs-goal-block"><div class="crs-card-label">Goal</div><div class="crs-card-text">Design product interventions that build consistent learning habits, reduce overwhelm, and increase course completion rate from 18% to 23.4%.</div></div>
+            <div class="crs-mini-grid">
+              <div class="crs-mini"><div class="crs-mini-num">7</div><div class="crs-mini-label">Solutions proposed</div></div>
+              <div class="crs-mini"><div class="crs-mini-num">6mo</div><div class="crs-mini-label">Implementation timeline</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overview -->
+    <div class="crs-section">
+      <div class="crs-eyebrow">Project Overview</div>
+      <div class="crs-sec-h2">Why learners start — and why they stop.</div>
+      <div class="crs-cards">
+        <div class="crs-overview-card"><div class="crs-oc-num">01</div><div class="crs-oc-title">Problem Space</div><div class="crs-oc-desc">Research revealed predictable drop-off patterns: most learners disengage within the first 7–10 days, before building any learning momentum.</div><ul class="crs-oc-list"><li>Only 18% of enrolled learners complete their courses</li><li>Most drop-offs occur within the first week</li><li>Learners who reach 25% completion are far more likely to finish</li></ul></div>
+        <div class="crs-overview-card"><div class="crs-oc-num">02</div><div class="crs-oc-title">Research & Insights</div><div class="crs-oc-desc">Synthesized learner interviews, exit surveys, NPS feedback, community discussions, Reddit threads, and platform analytics to uncover root causes.</div><ul class="crs-oc-list"><li>Motivation drops sharply after week one</li><li>Progress feels invisible without clear milestones</li><li>Large courses create psychological barriers</li></ul></div>
+        <div class="crs-overview-card"><div class="crs-oc-num">03</div><div class="crs-oc-title">Strategic Pillars</div><div class="crs-oc-desc">Four pillars guided solution design: Motivation, Progress Visibility, Accountability, and Personalization — each targeting a different root cause of drop-off.</div><ul class="crs-oc-list"><li>Habit-forming streaks & gamification</li><li>Personalized "Tailor Your Own Course" paths</li><li>Peer learning pods for social accountability</li></ul></div>
+      </div>
+    </div>
+
+    <!-- Personas -->
+    <div class="crs-bg2">
+      <div class="crs-section">
+        <div class="crs-eyebrow">User Personas</div>
+        <div class="crs-sec-h2">Three learners, three very different journeys.</div>
+        <div class="crs-sec-sub">Each persona faces distinct barriers to completion — from time constraints to motivation and competing priorities.</div>
+        <div class="crs-personas">
+          <div class="crs-persona">
+            <div class="crs-persona-avatar">BP</div>
+            <div class="crs-persona-name">The Busy Professional</div>
+            <div class="crs-persona-role">Upskilling for career growth</div>
+            <hr class="crs-persona-divider"/>
+            <div class="crs-persona-goals-label">Goals</div>
+            <div class="crs-persona-need">Upskill for promotions, switch careers, learn industry trends.</div>
+            <div class="crs-persona-pain">⚡ Pain: Limited time, inconsistent schedules, long learning paths cause drop-off after 2–3 weeks.</div>
+          </div>
+          <div class="crs-persona">
+            <div class="crs-persona-avatar">CS</div>
+            <div class="crs-persona-name">The College Student</div>
+            <div class="crs-persona-role">Building employability skills</div>
+            <hr class="crs-persona-divider"/>
+            <div class="crs-persona-goals-label">Goals</div>
+            <div class="crs-persona-need">Improve employability, learn beyond curriculum, explore career interests.</div>
+            <div class="crs-persona-pain">⚡ Pain: Competing exam priorities and multi-course enrollment leads to focus loss.</div>
+          </div>
+          <div class="crs-persona">
+            <div class="crs-persona-avatar">LL</div>
+            <div class="crs-persona-name">The Lifelong Learner</div>
+            <div class="crs-persona-role">Personal development enthusiast</div>
+            <hr class="crs-persona-divider"/>
+            <div class="crs-persona-goals-label">Goals</div>
+            <div class="crs-persona-need">Personal development, hobby exploration, and continuous learning.</div>
+            <div class="crs-persona-pain">⚡ Pain: Strong initial engagement but declining consistency due to lack of accountability and encouragement.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Insights -->
+    <div class="crs-section">
+      <div class="crs-eyebrow">Key Insights</div>
+      <div class="crs-sec-h2">Five patterns that drive drop-off.</div>
+      <div class="crs-insights">
+        <div class="crs-insight"><div class="crs-insight-num">01</div><div class="crs-insight-text">Most learner drop-offs begin within the first <strong>7–10 days</strong> of enrollment.</div></div>
+        <div class="crs-insight"><div class="crs-insight-num">02</div><div class="crs-insight-text">Learners who reach <strong>25% completion</strong> are significantly more likely to finish the entire course.</div></div>
+        <div class="crs-insight"><div class="crs-insight-num">03</div><div class="crs-insight-text"><strong>Short-term wins</strong> increase motivation more effectively than distant completion goals.</div></div>
+        <div class="crs-insight"><div class="crs-insight-num">04</div><div class="crs-insight-text"><strong>Peer accountability</strong> dramatically improves consistency and weekly learning retention.</div></div>
+        <div class="crs-insight"><div class="crs-insight-num">05</div><div class="crs-insight-text"><strong>Personalized reminders</strong> outperform generic nudges — learners respond to relevant, timely prompts.</div></div>
+      </div>
+    </div>
+
+    <!-- Solutions -->
+    <div class="crs-bg2">
+      <div class="crs-section">
+        <div class="crs-eyebrow">Proposed Solutions</div>
+        <div class="crs-sec-h2">Seven product interventions across four strategic pillars.</div>
+        <div class="crs-solutions">
+          <div class="crs-sol">
+            <div><div class="crs-sol-badge">Flagship · Solution 01</div><div class="crs-sol-title">Tailor Your Own Course</div><div class="crs-sol-sub">The highest-ROI opportunity: personalized learning paths</div><div class="crs-sol-desc">Many learners don't need an entire course — they need specific topics. This feature lets learners browse modules individually, select what they need, and create a personalized learning path with dynamic completion tracking and time estimates. A PM, for example, can skip beginner analytics and focus only on Experimentation, SQL, and Data Storytelling.</div><div class="crs-sol-impact-row"><span class="crs-sol-impact-label">Why it works:</span><span class="crs-sol-impact-val">Reduces overwhelm · Increases relevance · Improves ownership · Accelerates time-to-value</span></div></div>
+            <div class="crs-sol-rice"><div class="crs-sol-rice-label">RICE Score</div><div class="crs-sol-rice-num">129</div><div class="crs-sol-rice-breakdown"><div class="crs-rice-row"><span>Reach</span><span class="crs-rice-val">9</span></div><div class="crs-rice-row"><span>Impact</span><span class="crs-rice-val">9</span></div><div class="crs-rice-row"><span>Confidence</span><span class="crs-rice-val">8</span></div><div class="crs-rice-row"><span>Effort</span><span class="crs-rice-val">5</span></div></div></div>
+          </div>
+          <div class="crs-sol">
+            <div><div class="crs-sol-badge">Solution 02</div><div class="crs-sol-title">Streaks & Habit Builder</div><div class="crs-sol-sub">Daily learning habits through positive reinforcement</div><div class="crs-sol-desc">Daily and weekly learning streaks, a habit tracker, progress calendar, and achievement badges create positive reinforcement loops that encourage learners to return consistently — transforming sporadic sessions into a daily ritual.</div><div class="crs-sol-impact-row"><span class="crs-sol-impact-label">Impact:</span><span class="crs-sol-impact-val">Higher engagement frequency · Improved day-7 retention · Reduced cold-start drop-off</span></div></div>
+            <div class="crs-sol-rice"><div class="crs-sol-rice-label">RICE Score</div><div class="crs-sol-rice-num">121</div><div class="crs-sol-rice-breakdown"><div class="crs-rice-row"><span>Reach</span><span class="crs-rice-val">9</span></div><div class="crs-rice-row"><span>Impact</span><span class="crs-rice-val">6</span></div><div class="crs-rice-row"><span>Confidence</span><span class="crs-rice-val">9</span></div><div class="crs-rice-row"><span>Effort</span><span class="crs-rice-val">4</span></div></div></div>
+          </div>
+          <div class="crs-sol">
+            <div><div class="crs-sol-badge">Solution 03</div><div class="crs-sol-title">Course Credits & Rewards</div><div class="crs-sol-sub">Tangible incentives beyond certification</div><div class="crs-sol-desc">Learners earn credits upon course completion that can be redeemed for new courses, creating an additional incentive loop beyond certifications. A credit wallet and progress-based rewards keep long-term engagement high.</div><div class="crs-sol-impact-row"><span class="crs-sol-impact-label">Impact:</span><span class="crs-sol-impact-val">Increased completion · Repeat course purchases · Platform stickiness</span></div></div>
+            <div class="crs-sol-rice"><div class="crs-sol-rice-label">RICE Score</div><div class="crs-sol-rice-num">84</div><div class="crs-sol-rice-breakdown"><div class="crs-rice-row"><span>Reach</span><span class="crs-rice-val">8</span></div><div class="crs-rice-row"><span>Impact</span><span class="crs-rice-val">7</span></div><div class="crs-rice-row"><span>Confidence</span><span class="crs-rice-val">9</span></div><div class="crs-rice-row"><span>Effort</span><span class="crs-rice-val">6</span></div></div></div>
+          </div>
+          <div class="crs-sol">
+            <div><div class="crs-sol-badge">Solution 04</div><div class="crs-sol-title">Peer Learning Pods</div><div class="crs-sol-sub">Social accountability through small learner groups</div><div class="crs-sol-desc">Small groups of learners with weekly check-ins, shared discussions, and pod leaderboards create community and mutual accountability — keeping learners committed even during low-motivation periods.</div><div class="crs-sol-impact-row"><span class="crs-sol-impact-label">Impact:</span><span class="crs-sol-impact-val">Improved consistency · Reduced dropout rates · Community-led retention</span></div></div>
+            <div class="crs-sol-rice"><div class="crs-sol-rice-label">RICE Score</div><div class="crs-sol-rice-num">63</div><div class="crs-sol-rice-breakdown"><div class="crs-rice-row"><span>Reach</span><span class="crs-rice-val">9</span></div><div class="crs-rice-row"><span>Impact</span><span class="crs-rice-val">7</span></div><div class="crs-rice-row"><span>Confidence</span><span class="crs-rice-val">8</span></div><div class="crs-rice-row"><span>Effort</span><span class="crs-rice-val">8</span></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Metrics -->
+    <div class="crs-section">
+      <div class="crs-eyebrow">Success Metrics</div>
+      <div class="crs-sec-h2">A multi-layered measurement framework.</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:40px">
+        <div>
+          <div class="crs-north-star">
+            <div class="crs-ns-label">North Star Metric</div>
+            <div class="crs-ns-title">Course Completion Rate</div>
+            <div class="crs-ns-row">
+              <div class="crs-ns-metric"><div class="crs-ns-num">18%</div><div class="crs-ns-sub">Current</div></div>
+              <div class="crs-ns-arrow">→</div>
+              <div class="crs-ns-metric crs-ns-target"><div class="crs-ns-num">23.4%</div><div class="crs-ns-sub">Target (6 months)</div></div>
+            </div>
+            <div class="crs-ns-uplift">+30% relative uplift</div>
+          </div>
+          <div style="margin-top:24px">
+            <div class="crs-metric-group-label">Supporting Metric Categories</div>
+            <div class="crs-metric-pills">
+              <span class="crs-metric-pill">Daily Active Learners</span>
+              <span class="crs-metric-pill">Avg Session Duration</span>
+              <span class="crs-metric-pill">Streak Length</span>
+              <span class="crs-metric-pill">Badge Earn Rate</span>
+              <span class="crs-metric-pill">Tailored Course Adoption</span>
+              <span class="crs-metric-pill">Pod Engagement Rate</span>
+              <span class="crs-metric-pill">Credits Redeemed</span>
+              <span class="crs-metric-pill">Repeat Purchases</span>
+            </div>
+          </div>
+        </div>
+        <div class="crs-risks">
+          <div class="crs-risks-label">Risks & Mitigations</div>
+          <div class="crs-risk-row"><div class="crs-risk-name">Feature Overload</div><div class="crs-risk-fix">Phased, gradual rollout</div></div>
+          <div class="crs-risk-row"><div class="crs-risk-name">Low Pod Adoption</div><div class="crs-risk-fix">Optional participation design</div></div>
+          <div class="crs-risk-row"><div class="crs-risk-name">Engineering Complexity</div><div class="crs-risk-fix">Modular, decoupled architecture</div></div>
+          <div class="crs-risk-row"><div class="crs-risk-name">Privacy Concerns</div><div class="crs-risk-fix">Granular user controls</div></div>
+          <div class="crs-risk-row"><div class="crs-risk-name">Novelty Fatigue</div><div class="crs-risk-fix">Seasonal challenges & refreshes</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Roadmap -->
+    <div class="crs-bg2">
+      <div class="crs-section">
+        <div class="crs-eyebrow">6-Month Roadmap</div>
+        <div class="crs-sec-h2">From validation to scale.</div>
+        <div class="crs-roadmap">
+          <div class="crs-roadmap-card"><div class="crs-roadmap-month">Month 1</div><div class="crs-roadmap-phase">Research & Design</div><ul class="crs-roadmap-list"><li>Validate research findings</li><li>Define MVP scope</li><li>Design Tailor Your Course UX</li><li>Finalize success metrics</li></ul></div>
+          <div class="crs-roadmap-card"><div class="crs-roadmap-month">Month 2</div><div class="crs-roadmap-phase">MVP Development</div><ul class="crs-roadmap-list"><li>Build Tailor Your Course v1</li><li>Develop Streaks system</li><li>Course Credits backend</li><li>Peer Pod infrastructure</li></ul></div>
+          <div class="crs-roadmap-card"><div class="crs-roadmap-month">Month 3</div><div class="crs-roadmap-phase">Internal Testing</div><ul class="crs-roadmap-list"><li>Internal QA & UAT</li><li>Fix critical issues</li><li>Prepare onboarding flows</li><li>Set up analytics dashboards</li></ul></div>
+          <div class="crs-roadmap-card"><div class="crs-roadmap-month">Month 4</div><div class="crs-roadmap-phase">Beta Rollout</div><ul class="crs-roadmap-list"><li>5% beta user cohort</li><li>Gather qualitative feedback</li><li>Monitor completion uplift</li><li>Iterate on UX friction points</li></ul></div>
+          <div class="crs-roadmap-card"><div class="crs-roadmap-month">Month 5</div><div class="crs-roadmap-phase">A/B Testing</div><ul class="crs-roadmap-list"><li>Run controlled experiments</li><li>Test streak vs. no-streak cohorts</li><li>Optimize notification timing</li><li>Validate RICE prioritization</li></ul></div>
+          <div class="crs-roadmap-card"><div class="crs-roadmap-month">Month 6</div><div class="crs-roadmap-phase">Optimization & Scale</div><ul class="crs-roadmap-list"><li>Full platform rollout</li><li>Scale Peer Pods globally</li><li>Launch Credits marketplace</li><li>Report outcomes vs. targets</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Takeaways -->
+    <div class="crs-section">
+      <div class="crs-eyebrow">Key Takeaways</div>
+      <div class="crs-sec-h2">Five principles that guided the strategy.</div>
+      <div class="crs-takeaways">
+        <div class="crs-takeaway"><div class="crs-takeaway-icon">🎯</div><div class="crs-takeaway-title">Design for Behavior, Not Features</div><div class="crs-takeaway-desc">The biggest opportunity wasn't adding more content — it was understanding why users stop learning and designing against that pattern.</div></div>
+        <div class="crs-takeaway"><div class="crs-takeaway-icon">⚡</div><div class="crs-takeaway-title">Small Wins Drive Big Outcomes</div><div class="crs-takeaway-desc">Breaking learning into achievable micro-milestones builds momentum that carries learners past the critical 25% threshold.</div></div>
+        <div class="crs-takeaway"><div class="crs-takeaway-icon">🎨</div><div class="crs-takeaway-title">Personalization Increases Ownership</div><div class="crs-takeaway-desc">Users are significantly more likely to complete experiences they actively shape — "Tailor Your Own Course" puts agency in the learner's hands.</div></div>
+        <div class="crs-takeaway"><div class="crs-takeaway-icon">👥</div><div class="crs-takeaway-title">Community Creates Accountability</div><div class="crs-takeaway-desc">People are more consistent when learning with others. Even lightweight social mechanisms like Peer Pods significantly reduce drop-off.</div></div>
+        <div class="crs-takeaway"><div class="crs-takeaway-icon">✨</div><div class="crs-takeaway-title">Great Products Reduce Friction</div><div class="crs-takeaway-desc">The goal was not to make learners work harder — it was to make learning feel easier, more relevant, and worth returning to.</div></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="crs-footer">
+      <div class="crs-footer-inner">
+        <div><div class="crs-footer-title">Coursera<span class="crs-g"> Completion Strategy</span></div><div class="crs-footer-desc">A product strategy and growth case study focused on transforming learner engagement through personalization, habit formation, and social accountability.</div></div>
+        <div class="crs-footer-pills"><div class="crs-footer-pill">Product Strategy</div><div class="crs-footer-pill">Growth</div><div class="crs-footer-pill">Gamification</div><div class="crs-footer-pill">Personalization</div></div>
       </div>
     </div>
   </div>
