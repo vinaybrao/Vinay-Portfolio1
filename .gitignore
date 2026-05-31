@@ -1,6 +1,12 @@
 node_modules/
+# Allow og-image.png but exclude other generated images
+!og-image.png
 *.png
 audit.js
 screenshot.js
 package.json
 package-lock.json
+
+# Sensitive files — keep off GitHub
+context.md
+Vinay_SPM_May26.md

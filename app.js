@@ -443,7 +443,6 @@ async function askWithGrok(question){
   }, 10000));
 
   try {
-    console.log("[Grok AI Worker] Sending request for question:", question);
     const body = {
       question: question
       // systemPrompt intentionally omitted — owned by the Cloudflare Worker server-side
@@ -460,7 +459,6 @@ async function askWithGrok(question){
     });
 
     clearTimeout(timeoutId);
-    console.log("[Grok AI Worker] Response received with status:", response.status);
 
     const data = await response.json().catch(() => ({}));
 
@@ -478,7 +476,6 @@ async function askWithGrok(question){
       throw new Error("Received empty response from Grok AI Worker. Please try asking again.");
     }
 
-    console.log("[Grok AI Worker] Answer rendered successfully.");
     // Render response with typing transition feel
     respArea.innerHTML = `
       <div class="ask-q-bubble">${escHtml(question)}</div>
@@ -486,7 +483,7 @@ async function askWithGrok(question){
         <div class="ask-a-name">Vinay B</div>
         <div class="ask-a-content">${renderMarkdown(text)}</div>
       </div>
-      <button class="ask-reset-btn" onclick="askReset()">← Ask another question</button>
+      <button class="ask-reset-btn">← Ask another question</button>
     `;
 
   } catch(err){
@@ -505,9 +502,9 @@ async function askWithGrok(question){
         <div class="ask-error-icon">⚠️</div>
         <div class="ask-error-title">Connection Issue</div>
         <div class="ask-error-msg">${escHtml(errMsg)}</div>
-        <button class="ask-error-retry" onclick="askWithGrok('${escHtml(question).replace(/'/g,"\\'")}')">Try again</button>
+        <button class="ask-error-retry" data-question="${escHtml(question)}">Try again</button>
       </div>
-      <button class="ask-reset-btn" onclick="askReset()">← Back to questions</button>
+      <button class="ask-reset-btn">← Back to questions</button>
     `;
   }
 }
@@ -576,6 +573,154 @@ function handleEmailClick(e) {
     console.error('Clipboard copy failed:', err);
   });
 }
+
+// ═══════════════════════════════════════════════════════════
+// EVENT DELEGATION — replaces all inline onclick attributes in index.html
+// ═══════════════════════════════════════════════════════════
+(function attachEventListeners() {
+
+  // ―― Contact Popup ――
+  const backdrop = document.querySelector('.contact-popup-backdrop');
+  if (backdrop) backdrop.addEventListener('click', closeContactPopup);
+
+  const closeBtn = document.querySelector('.contact-popup-close');
+  if (closeBtn) closeBtn.addEventListener('click', closeContactPopup);
+
+  const emailLink = document.getElementById('popup-email-link');
+  if (emailLink) emailLink.addEventListener('click', handleEmailClick);
+
+  const navCta = document.getElementById('btn-contact');
+  if (navCta) navCta.addEventListener('click', openContactPopup);
+
+  // ―― Navigation Tabs (event delegation) ――
+  const navTabsEl = document.querySelector('.nav-tabs');
+  if (navTabsEl) {
+    navTabsEl.addEventListener('click', e => {
+      const tab = e.target.closest('.nav-tab');
+      if (tab) {
+        // Update aria-selected state
+        navTabsEl.querySelectorAll('.nav-tab').forEach(t => t.setAttribute('aria-selected', 'false'));
+        tab.setAttribute('aria-selected', 'true');
+        showTab(tab.dataset.tab, tab);
+      }
+    });
+  }
+
+  // ―― Ask Tab ――
+  const askInputEl = document.getElementById('ask-input');
+  if (askInputEl) askInputEl.addEventListener('keydown', e => { if (e.key === 'Enter') askSubmit(); });
+
+  const askSendBtn = document.getElementById('ask-send-btn');
+  if (askSendBtn) askSendBtn.addEventListener('click', askSubmit);
+
+  // Ask examples — event delegation
+  const askExamplesEl = document.querySelector('.ask-examples');
+  if (askExamplesEl) {
+    askExamplesEl.addEventListener('click', e => {
+      const ex = e.target.closest('.ask-example');
+      if (ex) askFromExample(ex);
+    });
+  }
+
+  // Ask response area — event delegation for dynamically generated buttons
+  const respArea = document.getElementById('ask-response-area');
+  if (respArea) {
+    respArea.addEventListener('click', e => {
+      if (e.target.classList.contains('ask-reset-btn')) askReset();
+      if (e.target.classList.contains('ask-error-retry')) {
+        askWithGrok(e.target.dataset.question || '');
+      }
+    });
+  }
+
+  // ―― Case Study Cards (event delegation) ――
+  const csGridEl = document.querySelector('.cs-grid');
+  if (csGridEl) {
+    csGridEl.addEventListener('click', e => {
+      const card = e.target.closest('.cs-card[data-study]');
+      if (card) openCaseStudy(card.dataset.study);
+    });
+    // Enter/Space keyboard support
+    csGridEl.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        const card = e.target.closest('.cs-card[data-study]');
+        if (card) { e.preventDefault(); openCaseStudy(card.dataset.study); }
+      }
+    });
+  }
+
+  // Case study back buttons
+  document.querySelectorAll('.cs-back').forEach(btn => {
+    btn.addEventListener('click', closeCaseStudy);
+  });
+
+  // ―― Experience Tab ――
+  const expPaymentCard = document.getElementById('exp-card-payment');
+  if (expPaymentCard) {
+    expPaymentCard.addEventListener('click', openPaymentJourney);
+    expPaymentCard.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openPaymentJourney(); }
+    });
+  }
+
+  // ―― Payment Journey ――
+  const pjBack = document.querySelector('.pj-back');
+  if (pjBack) pjBack.addEventListener('click', closePaymentJourney);
+
+  const pjStartBtn = document.getElementById('pj-start-btn');
+  if (pjStartBtn) pjStartBtn.addEventListener('click', () => pjGoTo(1));
+
+  const pjPayNow = document.getElementById('pj-pay-now-btn');
+  if (pjPayNow) pjPayNow.addEventListener('click', () => pjGoTo(2));
+
+  // Method tabs
+  const pjMethodTabsEl = document.querySelector('.pj-method-tabs');
+  if (pjMethodTabsEl) {
+    pjMethodTabsEl.addEventListener('click', e => {
+      const tab = e.target.closest('.pj-method-tab');
+      if (tab && tab.dataset.method) pjSwitchMethod(tab.dataset.method);
+    });
+  }
+
+  // Bank selection
+  const pjBankListEl = document.querySelector('.pj-bank-list');
+  if (pjBankListEl) {
+    pjBankListEl.addEventListener('click', e => {
+      const item = e.target.closest('.pj-bank-item[data-bank]');
+      if (item) pjSelectBank(item, item.dataset.bank);
+    });
+  }
+
+  // UPI app selection
+  const pjUpiAppsEl = document.querySelector('.pj-upi-apps');
+  if (pjUpiAppsEl) {
+    pjUpiAppsEl.addEventListener('click', e => {
+      const app = e.target.closest('.pj-upi-app[data-upi]');
+      if (app) pjSelectUpi(app, app.dataset.upi);
+    });
+  }
+
+  // Card number formatting
+  const pjCardInput = document.getElementById('pj-card-input');
+  if (pjCardInput) pjCardInput.addEventListener('input', function() { pjFormatCard(this); });
+
+  // Proceed to pay
+  const pjProceedBtn = document.getElementById('pj-proceed-btn');
+  if (pjProceedBtn) pjProceedBtn.addEventListener('click', () => pjGoTo(3));
+
+  // Gateway confirm & pay
+  const pjGwPayBtn = document.getElementById('pj-gw-pay-btn');
+  if (pjGwPayBtn) pjGwPayBtn.addEventListener('click', () => pjGoTo(4));
+
+  // Download invoice
+  const pjDlBtn = document.getElementById('pj-dl-btn');
+  if (pjDlBtn) pjDlBtn.addEventListener('click', pjDownloadInvoice);
+
+  // Back to experience (from success screen)
+  const pjSuccessBack = document.getElementById('pj-success-back-btn');
+  if (pjSuccessBack) pjSuccessBack.addEventListener('click', closePaymentJourney);
+
+})();
 
 // ═══════════════════════════════════════════════════════════
 // FIERY PARTICLE ANIMATION
@@ -737,4 +882,13 @@ function handleEmailClick(e) {
     animFrame = requestAnimationFrame(animate);
   }
   animate(0);
+
+  // Pause canvas animation when tab is hidden (saves battery & CPU)
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      cancelAnimationFrame(animFrame);
+    } else {
+      animFrame = requestAnimationFrame(animate);
+    }
+  });
 })();

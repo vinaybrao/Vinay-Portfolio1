@@ -4,12 +4,28 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <meta name="description" content="Vinay B is a Senior Product Manager with 12+ years of experience across B2B SaaS, Payments, Analytics, and AI Automation."/>
+<!-- Open Graph / LinkedIn sharing -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://vinaybrao.github.io/Vinay-Portfolio1/"/>
 <meta property="og:title" content="Vinay B — Senior Product Manager"/>
 <meta property="og:description" content="12+ years building and scaling products across B2B SaaS, Payments, Analytics, and AI Automation."/>
-<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://vinaybrao.github.io/Vinay-Portfolio1/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Vinay B — Senior Product Manager"/>
+<meta name="twitter:description" content="12+ years building and scaling products across B2B SaaS, Payments, Analytics, and AI Automation."/>
+<meta name="twitter:image" content="https://vinaybrao.github.io/Vinay-Portfolio1/og-image.png"/>
+<!-- Canonical URL -->
+<link rel="canonical" href="https://vinaybrao.github.io/Vinay-Portfolio1/"/>
 <title>Vinay B — Senior Product Manager</title>
+<!-- Google Fonts with preconnect for faster load -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css">
+<!-- Cache-busted assets -->
+<link rel="stylesheet" href="styles.css?v=1.1.0">
 </head>
 <body>
 
@@ -18,13 +34,13 @@
 
 <!-- ═══ CONTACT POPUP ═══ -->
 <div id="contact-popup" class="contact-popup">
-  <div class="contact-popup-backdrop" onclick="closeContactPopup()"></div>
+  <div class="contact-popup-backdrop"></div>
   <div class="contact-popup-card">
-    <button class="contact-popup-close" onclick="closeContactPopup()">✕</button>
+    <button class="contact-popup-close" aria-label="Close contact popup">✕</button>
     <div class="contact-popup-title">Let's Connect</div>
     <div class="contact-popup-subtitle">Feel free to reach out — I'd love to hear from you.</div>
     <div class="contact-popup-items">
-      <a id="popup-email-link" href="mailto:braovinay@gmail.com?subject=Product%20Management%20Opportunity" onclick="handleEmailClick(event)" class="contact-item">
+      <a id="popup-email-link" href="mailto:braovinay@gmail.com?subject=Product%20Management%20Opportunity" class="contact-item">
         <div class="contact-item-icon">✉️</div>
         <div class="contact-item-info">
           <div class="contact-item-label">Email</div>
@@ -40,7 +56,7 @@
         </div>
         <div class="contact-item-arrow">↗</div>
       </a>
-      <a id="popup-li-link" href="https://www.linkedin.com/in/vinaybrao/" target="_blank" class="contact-item">
+      <a id="popup-li-link" href="https://www.linkedin.com/in/vinaybrao/" target="_blank" rel="noopener noreferrer" class="contact-item">
         <div class="contact-item-icon">💼</div>
         <div class="contact-item-info">
           <div class="contact-item-label">LinkedIn</div>
@@ -54,14 +70,14 @@
 <nav>
   <div class="nav-inner">
     <div class="nav-logo">VB<span>.</span></div>
-    <div class="nav-tabs">
-      <button class="nav-tab active" onclick="showTab('portfolio',this)">Portfolio</button>
-      <button class="nav-tab" onclick="showTab('ask',this)">Ask</button>
-      <button class="nav-tab" onclick="showTab('casestudies',this)">Case Studies</button>
-      <button class="nav-tab" onclick="showTab('experience',this)">Experience</button>
+    <div class="nav-tabs" role="tablist" aria-label="Portfolio sections">
+      <button class="nav-tab active" role="tab" aria-selected="true" aria-controls="tab-portfolio" data-tab="portfolio">Portfolio</button>
+      <button class="nav-tab" role="tab" aria-selected="false" aria-controls="tab-ask" data-tab="ask">Ask</button>
+      <button class="nav-tab" role="tab" aria-selected="false" aria-controls="tab-casestudies" data-tab="casestudies">Case Studies</button>
+      <button class="nav-tab" role="tab" aria-selected="false" aria-controls="tab-experience" data-tab="experience">Experience</button>
     </div>
     <div class="nav-right">
-      <button class="nav-cta" onclick="openContactPopup()">Get in touch ↗</button>
+      <button class="nav-cta" id="btn-contact">Get in touch ↗</button>
     </div>
   </div>
 </nav>
@@ -154,15 +170,15 @@
 <div class="ask-wrap">
   <div class="ask-hero reveal-up">
     <div class="ask-badge">✦ AI-Powered</div>
-    <h1 class="ask-h1">Know more about <span class="ask-gradient">Vinay</span></h1>
+    <h2 class="ask-h1">Know more about <span class="ask-gradient">Vinay</span></h2>
     <p class="ask-sub">Curious about my experience, approach, or product thinking? Ask anything — I'll answer based on my background.</p>
   </div>
 
   <div class="ask-input-wrap">
     <div class="ask-input-container">
-      <svg class="ask-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-      <input type="text" class="ask-input" id="ask-input" placeholder="Ask anything about Vinay" onkeydown="if(event.key==='Enter')askSubmit()">
-      <button class="ask-send-btn" id="ask-send-btn" onclick="askSubmit()">
+      <svg class="ask-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" class="ask-input" id="ask-input" placeholder="Ask anything about Vinay" aria-label="Ask a question about Vinay">
+      <button class="ask-send-btn" id="ask-send-btn" aria-label="Submit question">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
       </button>
     </div>
@@ -171,17 +187,17 @@
   <div id="ask-examples-section">
     <div class="ask-examples-label">Frequently Asked Questions</div>
     <div class="ask-examples">
-      <div class="ask-example" tabindex="0" onclick="askFromExample(this)">
+      <div class="ask-example" tabindex="0">
         <div class="ask-example-icon">🤝</div>
         <div class="ask-example-text">Tell me about a time you had to influence a cross-functional team without direct authority</div>
         <div class="ask-example-arrow">→</div>
       </div>
-      <div class="ask-example" tabindex="0" onclick="askFromExample(this)">
+      <div class="ask-example" tabindex="0">
         <div class="ask-example-icon">📊</div>
         <div class="ask-example-text">Tell me about a time you had to make a critical product decision with little or ambiguous data</div>
         <div class="ask-example-arrow">→</div>
       </div>
-      <div class="ask-example" tabindex="0" onclick="askFromExample(this)">
+      <div class="ask-example" tabindex="0">
         <div class="ask-example-icon">🚀</div>
         <div class="ask-example-text">Describe a time when you had to ship a product or an initiative with highly limited engineering resources</div>
         <div class="ask-example-arrow">→</div>
@@ -206,7 +222,7 @@
   </div>
   <div class="cs-grid">
     <!-- WhatsApp SafeChat Card -->
-    <div class="cs-card" tabindex="0" onclick="openCaseStudy('wa')">
+    <div class="cs-card" tabindex="0" role="button" aria-label="Open WhatsApp SafeChat case study" data-study="wa">
       <div class="cs-thumb cs-thumb-wa">
         <div class="cs-thumb-inner">
           <div style="width:52px;height:52px;background:#25D366;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:4px;box-shadow:0 8px 24px rgba(37,211,102,.35)">
@@ -236,7 +252,7 @@
       </div>
     </div>
     <!-- Rapido Wanderlust Card -->
-    <div class="cs-card" tabindex="0" onclick="openCaseStudy('rapido')">
+    <div class="cs-card" tabindex="0" role="button" aria-label="Open Rapido Wanderlust case study" data-study="rapido">
       <div class="cs-thumb cs-thumb-rapido">
         <div class="cs-thumb-inner">
           <div style="width:52px;height:52px;background:#ffd400;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:4px;box-shadow:0 8px 24px rgba(255,212,0,.35);font-size:26px">🚕</div>
@@ -279,7 +295,7 @@
   </div>
   <div class="exp-proj-grid">
     <!-- Payment Journey Card -->
-    <div class="exp-proj-card" tabindex="0" id="exp-card-payment" onclick="openPaymentJourney()">
+    <div class="exp-proj-card" tabindex="0" id="exp-card-payment" role="button" aria-label="Open Stamp Duty Payment demo">
       <div class="exp-thumb">
         <div class="exp-thumb-icon">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/><path d="M6 15h4"/><path d="M14 15h4"/></svg>
@@ -320,7 +336,7 @@
   
 <button 
   class="cs-back" 
-  onclick="closeCaseStudy()"
+  aria-label="Back to Case Studies"
   style="
     top:20px;
     left:20px;
@@ -1364,6 +1380,7 @@
 &lt;/body&gt;
 &lt;/html&gt;
 "
+    title="Rapido Wanderlust Case Study"
     style="
       width:100%;
       height:100vh;
@@ -1377,7 +1394,7 @@
 
 <!-- ═══ CASE STUDY DETAIL: WhatsApp SafeChat ═══ -->
 <div id="cs-wa" class="cs-detail">
-  <button class="cs-back" onclick="closeCaseStudy()">← Back to Case Studies</button>
+  <button class="cs-back" aria-label="Back to Case Studies">← Back to Case Studies</button>
   <div class="wa">
     <!-- Hero -->
     <div class="wa-hero">
@@ -1478,7 +1495,7 @@
   <!-- Top navigation bar -->
   <div class="pj-topbar">
     <div class="pj-progress"><div class="pj-progress-bar" id="pj-prog-bar" style="width:20%"></div></div>
-    <button class="pj-back" onclick="closePaymentJourney()">
+    <button class="pj-back" aria-label="Back to Experience">
       <span class="pj-back-icon">←</span>
       <span class="pj-back-text">Back to Experience</span>
     </button>
@@ -1533,7 +1550,7 @@
         <div class="pj-intro-arrow">›</div>
         <div class="pj-intro-step"><div class="pj-intro-step-num">5</div>Receipt &amp; Download</div>
       </div>
-      <button class="pj-intro-cta" onclick="pjGoTo(1)">
+      <button class="pj-intro-cta" id="pj-start-btn">
         Start Experience
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </button>
@@ -1603,7 +1620,7 @@
                 <span class="pj-invoice-amount-label">Amount Due</span>
                 <span class="pj-invoice-amount-val">₹5,604</span>
               </div>
-              <button class="pj-pay-btn" onclick="pjGoTo(2)">💳 Pay Now →</button>
+              <button class="pj-pay-btn" id="pj-pay-now-btn">💳 Pay Now →</button>
               <p style="font-size:11px;color:#9ca3af;text-align:center;margin-top:12px">Secured by SecurePay · 256-bit SSL encryption</p>
             </div>
           </div>
@@ -1636,30 +1653,30 @@
         <!-- Right: Payment method -->
         <div class="pj-method-card">
           <div class="pj-method-tabs">
-            <button class="pj-method-tab active" id="pj-tab-nb" onclick="pjSwitchMethod('nb')">🏦 Net Banking</button>
-            <button class="pj-method-tab" id="pj-tab-card" onclick="pjSwitchMethod('card')">💳 Cards</button>
-            <button class="pj-method-tab" id="pj-tab-upi" onclick="pjSwitchMethod('upi')">📱 UPI</button>
+            <button class="pj-method-tab active" id="pj-tab-nb" data-method="nb">🏦 Net Banking</button>
+            <button class="pj-method-tab" id="pj-tab-card" data-method="card">💳 Cards</button>
+            <button class="pj-method-tab" id="pj-tab-upi" data-method="upi">📱 UPI</button>
           </div>
           <!-- Net Banking panel -->
           <div class="pj-method-panel active" id="pj-panel-nb">
             <div class="pj-field-label">SELECT YOUR BANK</div>
             <div class="pj-bank-list">
-              <div class="pj-bank-item" onclick="pjSelectBank(this,'HDFC Bank')"><div class="pj-bank-logo" style="background:#004C8F;color:#fff">HD</div><div class="pj-bank-name">HDFC Bank</div></div>
-              <div class="pj-bank-item" onclick="pjSelectBank(this,'ICICI Bank')"><div class="pj-bank-logo" style="background:#F7501A;color:#fff">IC</div><div class="pj-bank-name">ICICI Bank</div></div>
-              <div class="pj-bank-item" onclick="pjSelectBank(this,'State Bank of India')"><div class="pj-bank-logo" style="background:#22337F;color:#fff">SB</div><div class="pj-bank-name">State Bank of India</div></div>
-              <div class="pj-bank-item" onclick="pjSelectBank(this,'Axis Bank')"><div class="pj-bank-logo" style="background:#97144D;color:#fff">AX</div><div class="pj-bank-name">Axis Bank</div></div>
+              <div class="pj-bank-item" data-bank="HDFC Bank" role="button" aria-label="Select HDFC Bank"><div class="pj-bank-logo" style="background:#004C8F;color:#fff">HD</div><div class="pj-bank-name">HDFC Bank</div></div>
+              <div class="pj-bank-item" data-bank="ICICI Bank" role="button" aria-label="Select ICICI Bank"><div class="pj-bank-logo" style="background:#F7501A;color:#fff">IC</div><div class="pj-bank-name">ICICI Bank</div></div>
+              <div class="pj-bank-item" data-bank="State Bank of India" role="button" aria-label="Select State Bank of India"><div class="pj-bank-logo" style="background:#22337F;color:#fff">SB</div><div class="pj-bank-name">State Bank of India</div></div>
+              <div class="pj-bank-item" data-bank="Axis Bank" role="button" aria-label="Select Axis Bank"><div class="pj-bank-logo" style="background:#97144D;color:#fff">AX</div><div class="pj-bank-name">Axis Bank</div></div>
             </div>
           </div>
           <!-- Cards panel -->
           <div class="pj-method-panel" id="pj-panel-card">
             <div class="pj-field-label">CARD NUMBER</div>
-            <input class="pj-input" type="text" placeholder="1234  5678  9012  3456" maxlength="19" oninput="pjFormatCard(this)"/>
+            <input class="pj-input" id="pj-card-input" type="text" placeholder="1234  5678  9012  3456" maxlength="19" autocomplete="cc-number" aria-label="Card number"/>
             <div class="pj-row2" style="margin-top:0">
-              <div><div class="pj-field-label">EXPIRY DATE</div><input class="pj-input" type="text" placeholder="MM / YY" maxlength="7"/></div>
-              <div><div class="pj-field-label">CVV</div><input class="pj-input" type="password" placeholder="•••" maxlength="3"/></div>
+              <div><div class="pj-field-label">EXPIRY DATE</div><input class="pj-input" type="text" placeholder="MM / YY" maxlength="7" autocomplete="cc-exp" aria-label="Card expiry date"/></div>
+              <div><div class="pj-field-label">CVV</div><input class="pj-input" type="password" placeholder="•••" maxlength="3" autocomplete="cc-csc" aria-label="Card CVV"/></div>
             </div>
             <div class="pj-field-label">CARDHOLDER NAME</div>
-            <input class="pj-input" type="text" placeholder="As on card"/>
+            <input class="pj-input" type="text" placeholder="As on card" autocomplete="cc-name" aria-label="Cardholder name"/>
             <div style="display:flex;gap:8px;margin-top:12px;opacity:.5">
               <span style="font-size:11px;color:rgba(255,255,255,.6)">Accepted:</span>
               <span style="font-size:11px;color:rgba(255,255,255,.6)">VISA  •  Mastercard  •  RuPay  •  Amex</span>
@@ -1669,15 +1686,15 @@
           <div class="pj-method-panel" id="pj-panel-upi">
             <div class="pj-field-label">PAY WITH UPI APP</div>
             <div class="pj-upi-apps">
-              <div class="pj-upi-app" onclick="pjSelectUpi(this,'GPay')"><div class="pj-upi-app-icon">🔵</div>GPay</div>
-              <div class="pj-upi-app" onclick="pjSelectUpi(this,'PhonePe')"><div class="pj-upi-app-icon">🟣</div>PhonePe</div>
-              <div class="pj-upi-app" onclick="pjSelectUpi(this,'Paytm')"><div class="pj-upi-app-icon">🔷</div>Paytm</div>
-              <div class="pj-upi-app" onclick="pjSelectUpi(this,'BHIM')"><div class="pj-upi-app-icon">🇮🇳</div>BHIM</div>
+              <div class="pj-upi-app" data-upi="GPay" role="button" aria-label="Pay with GPay"><div class="pj-upi-app-icon">🔵</div>GPay</div>
+              <div class="pj-upi-app" data-upi="PhonePe" role="button" aria-label="Pay with PhonePe"><div class="pj-upi-app-icon">🟣</div>PhonePe</div>
+              <div class="pj-upi-app" data-upi="Paytm" role="button" aria-label="Pay with Paytm"><div class="pj-upi-app-icon">🔷</div>Paytm</div>
+              <div class="pj-upi-app" data-upi="BHIM" role="button" aria-label="Pay with BHIM"><div class="pj-upi-app-icon">🇮🇳</div>BHIM</div>
             </div>
             <div class="pj-field-label" style="margin-top:16px">OR ENTER UPI ID</div>
-            <input class="pj-input" type="text" placeholder="yourname@upi" id="pj-upi-input"/>
+            <input class="pj-input" type="text" placeholder="yourname@upi" id="pj-upi-input" aria-label="UPI ID"/>
           </div>
-          <button class="pj-proceed-btn" onclick="pjGoTo(3)">
+          <button class="pj-proceed-btn" id="pj-proceed-btn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
             Proceed to Pay ₹5,604
           </button>
@@ -1708,7 +1725,7 @@
           <div class="pj-timer-num" id="pj-timer-num">60</div>
         </div>
         <div class="pj-timer-label">Session expires in <span id="pj-timer-text">60</span> seconds</div>
-        <button class="pj-gw-pay-btn" id="pj-gw-pay-btn" onclick="pjGoTo(4)">🔒 Confirm & Pay ₹5,604</button>
+        <button class="pj-gw-pay-btn" id="pj-gw-pay-btn">🔒 Confirm &amp; Pay ₹5,604</button>
       </div>
       <div class="pj-gw-secure">
         🔒 Secured by SecurePay · PCI DSS Level 1 · RBI Authorized
@@ -1747,15 +1764,15 @@
         <div class="pj-receipt-row"><span class="pj-receipt-key">Status</span><span class="pj-receipt-val green">✓ Paid</span></div>
         <div class="pj-receipt-row"><span class="pj-receipt-key">Merchant</span><span class="pj-receipt-val">SecurePay Merchant Services</span></div>
       </div>
-      <button class="pj-dl-btn" onclick="pjDownloadInvoice()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <button class="pj-dl-btn" id="pj-dl-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Download Invoice
       </button>
-      <button class="pj-back-link" onclick="closePaymentJourney()">← Back to Experience</button>
+      <button class="pj-back-link" id="pj-success-back-btn">← Back to Experience</button>
     </div>
   </div>
 </div>
 
-<script src="app.js" defer></script>
+<script src="app.js?v=1.1.0" defer></script>
 </body>
 </html>

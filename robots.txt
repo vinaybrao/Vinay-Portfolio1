@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://vinaybrao.github.io/Vinay-Portfolio1/sitemap.xml
