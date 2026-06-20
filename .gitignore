@@ -12,3 +12,10 @@ context.md
 Vinay_SPM_May26.md
 server.js
 
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
